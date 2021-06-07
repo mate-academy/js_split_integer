@@ -1,17 +1,17 @@
 'use strict';
 
 describe(`Function 'splitInteger':`, () => {
-  let splitInteger;
-
-  beforeAll(() => {
-    splitInteger = require('./splitInteger').splitInteger;
-  });
+  const splitInteger = require('./splitInteger');
 
   it(`should be declared`, () => {
-
+    expect(splitInteger).toBeInstanceOf(Function);
   });
 
   it(`should return an array`, () => {
+
+  });
+
+  it(`should return an array with 'num' if parts = 1`, () => {
 
   });
 });
