@@ -2,13 +2,12 @@ Cover with tests a function `splitInteger` that accepts two positive integers `n
 The function divide `num` into even parts - or at least as even as they can be.
 
 Here are some details:
-- the function return an integer array;
+- the function returns an integer array;
 - there are `parts` elements (for example, if `parts = 5`, the `num` would be 
 splitted into 5 integers);
-- the parts of the `num` would be as close as possible;
-- the integers in the result array would be in the ascending order;
-- there is no reason to test for edge cases: the input to your function will always 
-be valid.
+- the parts of the `num` should be as close as possible;
+- the integers in the result array should be in the ascending order;
+- the input to your function will always be valid.
 
 Examples:
 ```
