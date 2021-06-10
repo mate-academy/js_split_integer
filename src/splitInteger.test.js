@@ -14,4 +14,6 @@ describe(`Function 'splitInteger':`, () => {
   it(`should return an array with 'num' if parts = 1`, () => {
 
   });
+  
+  // write more tests here
 });
