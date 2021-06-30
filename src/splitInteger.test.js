@@ -23,7 +23,7 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(10, 5)).toHaveLength(5);
   });
 
-  it(``, () => {
+  it(`should return 0 if divided by a negative number`, () => {
     expect(splitInteger(5, -10)).toEqual([0, 0, 0, 0, 0]);
   });
 });
