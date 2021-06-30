@@ -11,6 +11,23 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger()).toBeInstanceOf(Array);
   });
 
+  it(`should return an array of integers`, () => {
+    const res = (splitInteger(20, 3));
+
+    for (const item of res) {
+      expect(typeof item).toBe('number');
+    }
+  });
+
+  it(`should return an array in the ascending order`,
+    () => {
+      const result = (splitInteger(20, 3));
+
+      for (let index = 1; index < result.length; index++) {
+        expect(result[index]).toBeGreaterThanOrEqual(result[index - 1]);
+      }
+    });
+
   it(`should return an array with 'num' if parts = 1`, () => {
     expect(splitInteger(10, 1)).toEqual([10]);
   });
