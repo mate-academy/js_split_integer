@@ -11,6 +11,10 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger()).toBeInstanceOf(Array);
   });
 
+  it(`input values should be of type 'number'`, () => {
+    expect(splitInteger()).not.toBeNaN();
+  });
+
   it(`should return an array with 'num' if parts = 1`, () => {
     expect(splitInteger(10, 1)).toEqual([10]);
   });
