@@ -7,6 +7,14 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger).toBeInstanceOf(Function);
   });
 
+  it(`should have integers as input type of values`, () => {
+    const array = (splitInteger(7, 3));
+
+    for (const number of array) {
+      expect(typeof number).toBe('number');
+    }
+  });
+
   it(`should return an array`, () => {
     expect(splitInteger()).toBeInstanceOf(Array);
   });
