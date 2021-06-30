@@ -36,10 +36,6 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(10, 10).length).toEqual(10);
   });
 
-  it(`should return array in the ascending order`, () => {
-    expect(splitInteger(50, 3)).toEqual([16, 17, 17]);
-  });
-
   it(`should return [5, 5] if num = 10, parts = 2`, () => {
     expect(splitInteger(10, 2)).toEqual([5, 5]);
   });
