@@ -18,4 +18,8 @@ describe(`Function 'splitInteger':`, () => {
   it(`the parts of the num should be as close as possible`, () => {
     expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
   });
+
+  it(`the parts of the num should be equal`, () => {
+    expect(splitInteger(9, 3)).toEqual([3, 3, 3]);
+  });
 });
