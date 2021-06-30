@@ -12,9 +12,7 @@ describe(`Function 'splitInteger':`, () => {
   });
 
   it(`should return an array with 'num' if parts = 1`, () => {
-    const a = 2;
-
-    expect(splitInteger(a, 1)).toEqual([2]);
+    expect(splitInteger(2, 1)).toEqual([2]);
   });
 
   it(`should return an integer array`, () => {
@@ -26,10 +24,10 @@ describe(`Function 'splitInteger':`, () => {
   });
 
   it(`should return an array with same lenghth as 'parts' value`, () => {
-    expect(splitInteger(20, 4).length).toBe(4);
+    expect(splitInteger(20, 4)).toHaveLength(4);
   });
 
-  it(`should return an array with the parts of 'num' close as possible`, () => {
+  it(`should return an array with parts of 'num' close as possible`, () => {
     expect(splitInteger(20, 4)).toEqual([5, 5, 5, 5]);
   });
 
