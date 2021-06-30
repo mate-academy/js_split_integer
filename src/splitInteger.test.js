@@ -15,7 +15,7 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(7, 1)).toEqual([7]);
   });
 
-  it(`shoul return an arrey in ascending order`, () => {
+  it(`should return an array in ascending order`, () => {
     const result = (splitInteger(17, 3));
 
     for (let i = 1; i < result.length; i++) {
