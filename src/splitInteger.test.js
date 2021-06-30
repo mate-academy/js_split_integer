@@ -8,14 +8,15 @@ describe(`Function 'splitInteger':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(splitInteger(10, 3)).toBeInstanceOf(Array);
+    expect(typeof splitInteger()).toStrictEqual('object');
   });
 
   it(`should return an array with 'num' if parts = 1`, () => {
     expect(splitInteger(8, 1)).toEqual([8]);
   });
 
-  it(`should return min difference between 'num'`, () => {
+  it(`should be the minimum difference between 
+  the elements of the array`, () => {
     expect(splitInteger(8, 3)).toEqual([2, 3, 3]);
   });
 
