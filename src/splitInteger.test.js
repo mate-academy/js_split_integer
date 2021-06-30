@@ -23,7 +23,7 @@ describe(`Function 'splitInteger':`, () => {
     }
   });
 
-  it(`should return even parts if 'num % parts = 0'`, () => {
+  it(`should return parts if 'num % parts = 0'`, () => {
     expect(splitInteger(25, 5)).toEqual([5, 5, 5, 5, 5]);
   });
 
