@@ -8,10 +8,12 @@ describe(`Function 'splitInteger':`, () => {
   });
 
   it(`should return an array`, () => {
+    expect(splitInteger(8, 1)).toBeInstanceOf(Array);
 
   });
 
   it(`should return an array with 'num' if parts = 1`, () => {
+    expect(splitInteger(20, 7)).toHaveLength(7);
 
   });
   
