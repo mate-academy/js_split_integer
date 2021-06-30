@@ -26,4 +26,12 @@ describe(`Function 'splitInteger':`, () => {
   it(`should return 5 elements with num = 10, parts = 5`, () => {
     expect(splitInteger(10, 5).length).toEqual(5);
   });
+
+  it(`should return 5 elements with num = 11, parts = 5`, () => {
+    expect(splitInteger(11, 5).length).toEqual(5);
+  });
+
+  it(`should return[21,22,22] if num = 65, parts = 3`, () => {
+    expect(splitInteger(65, 3)).toEqual([21, 22, 22]);
+  });
 });
