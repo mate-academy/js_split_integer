@@ -8,7 +8,7 @@ describe(`Function 'splitInteger':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(typeof splitInteger()).toBe('object');
+    expect(splitInteger()).toBeInstanceOf(Array);
   });
 
   it(`should return an array with 'num' if parts = 1`, () => {
@@ -23,17 +23,5 @@ describe(`Function 'splitInteger':`, () => {
 
   it(`the integers in the result array should be ordered ASC`, () => {
     expect(splitInteger(32, 6)).toStrictEqual([5, 5, 5, 5, 6, 6]);
-  });
-
-  it(`should return an empty array if num = 3, parts = 'string'`, () => {
-    expect(splitInteger(3, 'string')).toStrictEqual([]);
-  });
-
-  it(`should return an empty array if num = 'string', parts = 5`, () => {
-    expect(splitInteger('string', 5)).toStrictEqual([]);
-  });
-
-  it(`should return an empty array if num = 'string', parts = 'string'`, () => {
-    expect(splitInteger('string', 'string')).toStrictEqual([]);
   });
 });
