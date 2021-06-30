@@ -44,3 +44,4 @@ describe(`Function 'splitInteger':`, () => {
       }
     });
 });
+ 
