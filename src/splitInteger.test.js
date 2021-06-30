@@ -3,8 +3,16 @@
 describe(`Function 'splitInteger':`, () => {
   const splitInteger = require('./splitInteger');
 
-  it(`should be declared`, () => {
+  it(`function 'splitInteger' should be declared`, () => {
     expect(splitInteger).toBeInstanceOf(Function);
+  });
+
+  it(`should return an array`, () => {
+    expect(splitInteger()).toBeInstanceOf(Array);
+  });
+
+  it(`variables should be of type 'number'`, () => {
+    expect(splitInteger()).not.toBeNaN();
   });
 
   it(`should return an array: [5, 5, 5, 5, 6, 6]`, () => {
