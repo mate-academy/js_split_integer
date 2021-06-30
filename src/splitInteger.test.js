@@ -8,12 +8,22 @@ describe(`Function 'splitInteger':`, () => {
   });
 
   it(`should return an array`, () => {
-
+    expect(splitInteger([]).constructor.name).toEqual('Array');
   });
 
   it(`should return an array with 'num' if parts = 1`, () => {
-
+    expect(splitInteger(1, 1)).toEqual([1]);
   });
-  
-  // write more tests here
+
+  it(`should return object`, () => {
+    expect(typeof splitInteger('input')).toEqual('object');
+  });
+
+  it(`should return array length`, () => {
+    expect(splitInteger(10, 5)).toHaveLength(5);
+  });
+
+  it(``, () => {
+    expect(splitInteger(5, -10)).toEqual([0, 0, 0, 0, 0]);
+  });
 });
