@@ -8,7 +8,7 @@ describe(`Function 'splitInteger':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(typeof splitInteger()).toBe('object');
+    expect(splitInteger()).toBeInstanceOf(Array);
   });
 
   it(`should return an array with 'num' if parts = 1`, () => {
@@ -27,13 +27,5 @@ describe(`Function 'splitInteger':`, () => {
 
   it(`should return an array with the integers in the ascending order`, () => {
     expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
-  });
-
-  it(`should return an empty array if num = 'ten', part = 2`, () => {
-    expect(splitInteger('ten', 2)).toEqual([]);
-  });
-
-  it(`should return an empty array if num = 54, part = 'four'`, () => {
-    expect(splitInteger(54, 'four')).toEqual([]);
   });
 });
