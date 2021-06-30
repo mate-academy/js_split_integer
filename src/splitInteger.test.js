@@ -7,9 +7,11 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger).toBeInstanceOf(Function);
   });
 
-  it(`should return an array of numbers`, () => {
+  it(`should return an array`, () => {
     expect(splitInteger()).toBeInstanceOf(Array);
+  });
 
+  it(`should return an array of numbers`, () => {
     for (const result in splitInteger) {
       expect(typeof result).toEqual(['number']);
     }
@@ -19,12 +21,12 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(5, 1)).toEqual([5]);
   });
 
-  it(`should  return integer numbers `, () => {
+  it(`should  return integers `, () => {
     expect(splitInteger(7, 2)).toEqual([3, 4]);
   });
 
   it(`should return an array that length is equal to the 'parts' value`, () => {
-    expect(splitInteger(5, 5)).toEqual([1, 1, 1, 1, 1]);
+    expect(splitInteger(5, 5)).toHaveLength(5);
   });
 
   it(`should return an array with as close values as possible`, () => {
