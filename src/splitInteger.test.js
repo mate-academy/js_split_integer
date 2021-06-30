@@ -8,12 +8,22 @@ describe(`Function 'splitInteger':`, () => {
   });
 
   it(`should return an array`, () => {
-
+    expect(splitInteger()).toBeInstanceOf(Array);
   });
 
   it(`should return an array with 'num' if parts = 1`, () => {
-
+    expect(splitInteger(8, 1)).toEqual([8]);
   });
-  
-  // write more tests here
+
+  it(`should return 5 elements with num = 10, parts = 5`, () => {
+    expect(splitInteger(10, 5).length).toEqual(5);
+  });
+
+  it(`should return [4, 4, 4, 5] with num = 17, parts = 4`, () => {
+    expect(splitInteger(17, 4)).toEqual([4, 4, 4, 5]);
+  });
+
+  it(`should return [4, 4, 5, 5] with num = 18, parts = 4`, () => {
+    expect(splitInteger(18, 4)).toEqual([4, 4, 5, 5]);
+  });
 });
