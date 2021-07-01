@@ -24,14 +24,14 @@ describe(`Function 'splitInteger':`, () => {
   });
 
   it(`should return 0 if divided by a number`, () => {
-    expect(splitInteger(21, 8)).toEqual([2, 2, 2, 2, 2, 2, 2, 6]);
+    expect(splitInteger(21, 8)).toEqual([2, 2, 2, 3, 3, 3, 3, 3]);
   });
 
   it(`should return 0 if divided by a number`, () => {
-    expect(splitInteger(519, 4)).toEqual([125, 125, 125, 144]);
+    expect(splitInteger(519, 4)).toEqual([129, 130, 130, 130]);
   });
 
-  it(`should return 0 if divided by a negative number`, () => {
-    expect(splitInteger(63, 5)).toEqual([10, 10, 10, 10, 23]);
+  it(`should return 0 if divided by a number`, () => {
+    expect(splitInteger(63, 5)).toEqual([12, 12, 13, 13, 13]);
   });
 });
