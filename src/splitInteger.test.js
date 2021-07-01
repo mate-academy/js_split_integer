@@ -19,6 +19,7 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(30, 5)).toEqual([6, 6, 6, 6, 6]);
   });
 
+  describe(`Function 'splitInteger':`, () => {
   it(`should return an array with 'num' if parts = 1`, () => {
     expect(splitInteger(8, 1)).toEqual([8]);
   });
