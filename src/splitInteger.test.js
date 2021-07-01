@@ -19,11 +19,11 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(10, 5).length).toEqual(5);
   });
 
-  it(`should return [4, 4, 4, 5] with num = 17, parts = 4`, () => {
+  it(`the parts of the num should be as close as possible`, () => {
     expect(splitInteger(17, 4)).toEqual([4, 4, 4, 5]);
   });
 
-  it(`should return [4, 4, 5, 5] with num = 18, parts = 4`, () => {
+  it(`the integers in the result array should be in the ascending order`, () => {
     expect(splitInteger(18, 4)).toEqual([4, 4, 5, 5]);
   });
 
