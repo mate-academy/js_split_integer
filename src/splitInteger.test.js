@@ -1,7 +1,6 @@
 });
 
 it(`should return an array`, () => {
-
   expect(splitInteger()).toBeInstanceOf(Array);
 });
 
@@ -17,5 +16,4 @@ it(`should return an array in ascending order`, () => {
   expect(splitInteger(26, 5)).toEqual([5, 5, 5, 5, 6]);
 });
 
-// write more tests here
 });
