@@ -23,8 +23,8 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(14, 3)).toStrictEqual([4, 5, 5]);
   });
 
-  it(`should return integers in array in ascending order`, () => {
-    expect(splitInteger(17, 4)).not.toBe([4, 4, 5, 4]);
+  it(`should return integers in array not in descending order`, () => {
+    expect(splitInteger(17, 4)).not.toBe([5, 4, 4, 4]);
   });
 
   it(`should return empty array if "sum" is not a number`, () => {
