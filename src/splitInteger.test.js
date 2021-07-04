@@ -11,13 +11,6 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(9, 3)).toBeInstanceOf(Array);
   });
 
-  // it(`should return an array with 'num' if parts = 1`,
-  //   () => {
-  //     const expectNum = 19;
-
-  //     expect(splitInteger(expectNum, 1).toEqual([19]));
-  //   });
-
   it(`should return equal 'parts' of the 'num'`,
     () => {
       expect(splitInteger(60, 5)).toEqual([12, 12, 12, 12, 12]);
