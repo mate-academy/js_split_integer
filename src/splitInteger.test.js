@@ -15,23 +15,19 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(1, 1)).toEqual([1]);
   });
 
-  it(`should return object`, () => {
-    expect(typeof splitInteger('input')).toEqual('object');
-  });
-
   it(`should return array length`, () => {
     expect(splitInteger(10, 5)).toHaveLength(5);
   });
 
-  it(`should return 0 if divided by a number`, () => {
+  it(`should return [2, 2, 2, 3, 3, 3, 3, 3] if num = 21, parts = 8`, () => {
     expect(splitInteger(21, 8)).toEqual([2, 2, 2, 3, 3, 3, 3, 3]);
   });
 
-  it(`should return 0 if divided by a number`, () => {
+  it(`should return [129, 130, 130, 130] if num = 519, parts = 4`, () => {
     expect(splitInteger(519, 4)).toEqual([129, 130, 130, 130]);
   });
 
-  it(`should return 0 if divided by a number`, () => {
+  it(`should return [12, 12, 13, 13, 13] if num = 63, parts = 5`, () => {
     expect(splitInteger(63, 5)).toEqual([12, 12, 13, 13, 13]);
   });
 });
