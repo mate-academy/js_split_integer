@@ -12,7 +12,7 @@ describe(`Function 'splitInteger':`, () => {
   });
 
   it(`should return an array with 'num' if parts = 1`, () => {
-    expect(splitInteger(6, 1)).toEqual([8]);
+    expect(splitInteger(6, 1)).toEqual([6]);
   });
 
   it(`should return 5 elements with num = 10, parts = 5`, () => {
