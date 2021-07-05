@@ -15,10 +15,6 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(1, 1)).toEqual([1]);
   });
 
-  it(`should return array length`, () => {
-    expect(splitInteger(10, 5)).toHaveLength(5);
-  });
-
   it(`should return [2, 2, 2, 3, 3, 3, 3, 3] if num = 21, parts = 8`, () => {
     expect(splitInteger(21, 8)).toEqual([2, 2, 2, 3, 3, 3, 3, 3]);
   });
