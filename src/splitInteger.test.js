@@ -15,22 +15,12 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(3, 1)).toStrictEqual([3]);
   });
 
-  it(`should return an array with 'num' if parts = 1`, () => {
-    expect(splitInteger(3, 1)).toStrictEqual([3]);
+  it(`'should return 5 integers if parts = 5`, () => {
+    expect(splitInteger(5, 5)).toStrictEqual([1, 1, 1, 1, 1]);
   });
 
-  it(`there are parts elements (for example, if parts = 5, 
-    the num would be splitted into 5 integers)`, () => {
-    expect(splitInteger(0, 5)).toStrictEqual([0, 0, 0, 0, 0]);
-  });
-
-  it(`the integers in the result array should be 
-  in the ascending order`, () => {
+  it(`should return array in the ascending order`, () => {
     expect(splitInteger(27, 13))
       .toStrictEqual([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3]);
-  });
-
-  it(`should return result type 'Object'`, () => {
-    expect(typeof splitInteger(3, 1)).toBe('object');
   });
 });
