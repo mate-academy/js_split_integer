@@ -7,10 +7,6 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger).toBeInstanceOf(Function);
   });
 
-  it(`should accept positive integers`, () => {
-    expect(splitInteger(10, 5)).toBeTruthy();
-  });
-
   it(`should return an array`, () => {
     expect(splitInteger()).toBeInstanceOf(Array);
   });
