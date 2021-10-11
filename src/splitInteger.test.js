@@ -19,7 +19,7 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(25, 5)).toEqual([5, 5, 5, 5, 5]);
   });
 
-  it(`should should return closer numbers`, () => {
+  it(`should return closer numbers`, () => {
     expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
   });
 
