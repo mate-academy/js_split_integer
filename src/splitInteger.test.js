@@ -19,14 +19,6 @@ describe(`Function 'splitInteger':`, () => {
 
   // write more tests here
 
-  it(`should return an empty array if the input is ()`, () => {
-    expect(splitInteger()).toEqual([]);
-  });
-
-  it(`should return an empty array if the input is only 'num'`, () => {
-    expect(splitInteger(1)).toEqual([]);
-  });
-
   it(`should return an array [3, 3]]`, () => {
     expect(splitInteger(6, 2)).toEqual([3, 3]);
   });
@@ -34,5 +26,9 @@ describe(`Function 'splitInteger':`, () => {
   it(`should return an array with lenth 
   equal to 'parts' if 'num' === 'parts']`, () => {
     expect(splitInteger(10, 10)).toEqual([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
+  });
+
+  it(`result array should be in the ascending order`, () => {
+    expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
   });
 });
