@@ -21,17 +21,16 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(24, 5)).toEqual([4, 5, 5, 5, 5]);
   });
 
-  it(`the integers in the result array should be 
-    in the ascending order`, () => {
+  it(`should return the parts "num" as close as possible;`, () => {
     expect(splitInteger(17, 4)).toEqual([4, 4, 4, 5]);
   });
 
-  it(`the integers in the result array should be in the 
-    ascending order`, () => {
+  it(`should return array with integers 
+    in the ascending order`, () => {
     expect(splitInteger(15, 6)).toEqual([2, 2, 2, 3, 3, 3]);
   });
 
-  it(`the input to your function will always be valid`, () => {
+  it(`should be always valid input to function`, () => {
     expect(splitInteger()).toBeTruthy();
   });
 });
