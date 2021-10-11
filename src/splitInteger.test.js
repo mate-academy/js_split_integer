@@ -15,7 +15,7 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(33, 1)).toEqual([33]);
   });
 
-  it(`should return an array with 'num' if parts = 1`, () => {
+  it(`if parts = 5, the num would be splitted into 5 integers`, () => {
     expect(splitInteger(25, 5)).toEqual([5, 5, 5, 5, 5]);
   });
 
