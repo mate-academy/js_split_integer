@@ -6,6 +6,7 @@
  *
  * @returns {number[]}
  */
+
 function splitInteger(num, parts) {
   const result = [];
   const divisor = Math.floor(num / parts);
