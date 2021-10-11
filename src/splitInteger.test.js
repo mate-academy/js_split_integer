@@ -33,8 +33,4 @@ describe(`Function 'splitInteger':`, () => {
   it(`should return result type 'Object'`, () => {
     expect(typeof splitInteger(3, 1)).toBe('object');
   });
-
-  it(`should work with negative 'num'`, () => {
-    expect(splitInteger(-15, 3)).toEqual([-5, -5, -5]);
-  });
 });
