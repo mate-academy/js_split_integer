@@ -21,5 +21,4 @@ function splitInteger(num, parts) {
 
   return result;
 }
-
 module.exports = splitInteger;
