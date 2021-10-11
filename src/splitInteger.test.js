@@ -15,19 +15,19 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(33, 1)).toEqual([33]);
   });
 
-  it(`if parts = 5, the num would be splitted into 5 integers`, () => {
+  it(`should be splitted into 5 integers if parts = 5`, () => {
     expect(splitInteger(25, 5)).toEqual([5, 5, 5, 5, 5]);
   });
 
-  it(`the parts of the num should be as close as possible`, () => {
+  it(`should should return closer numbers`, () => {
     expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
   });
 
-  it(`integers in the result array should be in ascending order;`, () => {
+  it(`should be in ascending order all integers in the result array`, () => {
     expect(splitInteger(73, 5)).toEqual([14, 14, 15, 15, 15]);
   });
 
-  it(`the input to your function will always be valid`, () => {
+  it(`should be always valid all of input data in function`, () => {
     expect(splitInteger(324, 5)).toEqual([64, 65, 65, 65, 65]);
   });
 });
