@@ -29,8 +29,4 @@ describe(`Function 'splitInteger':`, () => {
     in the ascending order`, () => {
     expect(splitInteger(15, 6)).toEqual([2, 2, 2, 3, 3, 3]);
   });
-
-  it(`should be always valid input to function`, () => {
-    expect(splitInteger()).toBeTruthy();
-  });
 });
