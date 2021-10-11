@@ -8,7 +8,9 @@ describe(`Function 'splitInteger':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(typeof splitInteger(8, 1)).toEqual('object');
+    const result = splitInteger(8, 1);
+
+    expect(result).toBeInstanceOf(Array);
   });
 
   it(`should return an array with 'num' if parts = 1`, () => {
