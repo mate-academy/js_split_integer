@@ -32,9 +32,4 @@ describe(`Function 'splitInteger':`, () => {
   it(`should return the result array in the ascending order`, () => {
     expect(splitInteger(18, 4)).toEqual([4, 4, 5, 5]);
   });
-
-  it(`should return an array with [-5, -5, -5, -5, -5, -5] 
-  if splitInteger(-18, 4)`, () => {
-    expect(splitInteger(-18, 4)).toEqual([-5, -5, -5, -5, -5, -5]);
-  });
 });
