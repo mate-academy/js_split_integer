@@ -24,7 +24,7 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(2, 2)).toEqual([1, 1]);
   });
 
-  it(`should return arr.if part>num w/'num' last elem.=1, rest leading el=0`,
+  it(`should return arr of 1 w/leading elms=0 if part>num`,
     () => {
       expect(splitInteger(3, 5)).toEqual([0, 0, 1, 1, 1]);
     });
@@ -45,11 +45,11 @@ describe(`Function 'splitInteger':`, () => {
 
   it(`should return array of 'parts' elements`, () => {
     const num = 10; const parts = 6;
-    const a = splitInteger(num, parts);
-    const result = (a.length === parts);
+    const result = splitInteger(num, parts);
+    // const result = (a.length === parts);
 
     //
-    expect(result).toEqual(true);
+    expect(result.length).toEqual(parts);
   });
 
   it(`should return array of 100000 elements within 5ms`, () => {
