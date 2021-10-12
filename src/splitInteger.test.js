@@ -3,11 +3,11 @@
 describe(`Function 'splitInteger':`, () => {
   const splitInteger = require('./splitInteger');
 
-  it(`Function 'splitInteger' should be declared`, () => {
+  it(`should be declared`, () => {
     expect(splitInteger).toBeInstanceOf(Function);
   });
 
-  it(`Function 'splitInteger'should return an array`, () => {
+  it(`should return an array`, () => {
     expect(splitInteger()).toEqual([]);
   });
 
