@@ -15,7 +15,7 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(8, 1)).toEqual([8]);
   });
 
-  it(`should return an array with [2, 2, 2, 2] if splitInteger(8, 4)`, () => {
+  it(`should return an array with 4 parts if splitInteger(8, 4)`, () => {
     expect(splitInteger(8, 4)).toEqual([2, 2, 2, 2]);
   });
 
