@@ -26,4 +26,5 @@ describe(`Function 'splitInteger':`, () => {
   it(`should return an array [5, 5, 5, 5, 6, 6] if num = 31, parts = 6`, () => {
     expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
   });
+  
 });
