@@ -29,14 +29,6 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(7, 2)).toEqual([3, 4]);
   });
 
-  // it(`should return empty array when inputs is empty`, () => {
-  //   expect(splitInteger()).toEqual([]);
-  // });
-
-  // it(`should return [0] when inputs is 0`, () => {
-  //   expect(splitInteger(0, 0)).toEqual([]);
-  // });
-
   it(`should return [4] when inputs is 8, 2`, () => {
     expect(splitInteger(8, 2)).toEqual([4, 4]);
   });
