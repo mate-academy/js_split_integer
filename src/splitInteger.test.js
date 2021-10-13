@@ -15,10 +15,6 @@ describe(`Function 'splitInteger':`, () => {
     expect(splitInteger(5, 1)).toEqual([5]);
   });
 
-  it(`should return empty array if num = 5, parts = -1`, () => {
-    expect(splitInteger(5, -1)).toEqual([]);
-  });
-
   it(`should return an array [1, 1, 1, 1, 1] if num = 5, parts = 5`, () => {
     expect(splitInteger(5, 5)).toEqual([1, 1, 1, 1, 1]);
   });
@@ -26,5 +22,4 @@ describe(`Function 'splitInteger':`, () => {
   it(`should return an array [5, 5, 5, 5, 6, 6] if num = 31, parts = 6`, () => {
     expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
   });
-  
 });
