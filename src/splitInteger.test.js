@@ -26,8 +26,4 @@ describe(`Function 'splitInteger':`, () => {
   it(`should be in ascending order all integers in the result array`, () => {
     expect(splitInteger(73, 5)).toEqual([14, 14, 15, 15, 15]);
   });
-
-  it(`should be always valid all of input data in function`, () => {
-    expect(splitInteger(324, 5)).toEqual([64, 65, 65, 65, 65]);
-  });
 });
