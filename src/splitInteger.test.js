@@ -8,7 +8,7 @@ describe(`Function 'splitInteger':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(typeof splitInteger(17, 4)).toEqual('object');
+    expect(splitInteger()).toBeInstanceOf(Array);
   });
 
   it(`should return an array with 'num' if parts = 1`, () => {
@@ -16,7 +16,8 @@ describe(`Function 'splitInteger':`, () => {
   });
 
   // write more tests here
-  it(`'part' must be equal to the length of the array 'result'`, () => {
+  it(`should return length of 'result' which 
+  must be equal to the 'part'`, () => {
     expect(splitInteger(17, 4)).toHaveLength(4);
   });
 
