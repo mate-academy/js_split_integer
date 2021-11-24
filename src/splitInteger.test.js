@@ -1,19 +1,17 @@
-'use strict';
+const splitInteger = require('./splitInteger');
 
-describe(`Function 'splitInteger':`, () => {
-  const splitInteger = require('./splitInteger');
+test(`should split a number into equal parts if a value is divisible by a numberOfParts`, () => {
 
-  it(`should be declared`, () => {
-    expect(splitInteger).toBeInstanceOf(Function);
-  });
+});
 
-  it(`should return an array`, () => {
+test(`should return a part equals to a value when splitting into 1 part`, () => {
 
-  });
+});
 
-  it(`should return an array with 'num' if parts = 1`, () => {
+test('should sort parts ascending if they are not equal', () => {
 
-  });
-  
-  // write more tests here
+});
+
+test('should add zeros if value < numberOfParts', () => {
+
 });
