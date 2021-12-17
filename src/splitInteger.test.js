@@ -20,7 +20,7 @@ test('should add zeros if value < numberOfParts', () => {
   expect(splitInteger(1, 2)).toEqual([0, 1]);
 });
 
-test('should add zeros if value < numberOfParts', () => {
+test('should return an array', () => {
   const result = splitInteger(3, 4);
 
   expect(result).toBeInstanceOf(Array);
