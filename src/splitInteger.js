@@ -1,4 +1,6 @@
-/**
+'use strict';
+
+/** git
  * @param {number} value
  * @param {number} numberOfParts
  *
