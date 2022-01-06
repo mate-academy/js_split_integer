@@ -8,6 +8,14 @@
  */
 function splitInteger(value, numberOfParts) {
   const parts = [];
+
+  if (value === 0) {
+    parts.length = numberOfParts;
+    parts.fill(0);
+
+    return parts;
+  }
+
   let rest = value;
 
   for (let partsLeft = numberOfParts; partsLeft > 0; partsLeft--) {
