@@ -7,11 +7,11 @@ test(`should split a number into equal parts if a value is divisible by a number
 });
 
 test(`should return a part equals to a value when splitting into 1 part`, () => {
-  expect(splitInteger(18, 2)).toEqual([9, 9]);
+  expect(splitInteger(10, 1)).toEqual([10]);
 });
 
 test('should sort parts ascending if they are not equal', () => {
-  expect(splitInteger(20, 5)).toEqual([4, 4, 4, 4, 4]);
+  expect(splitInteger(21, 5)).toEqual([4, 4, 4, 4, 5]);
 });
 
 test('should add zeros if value < numberOfParts', () => {
