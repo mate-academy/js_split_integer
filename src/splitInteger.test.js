@@ -5,7 +5,7 @@ describe('splitInteger function', () => {
 
   test(`should split a number into equal parts if
   a value is divisible by a numberOfParts`, () => {
-    expect(splitInteger(6, 2)).toHaveLength(2);
+    expect(splitInteger(6, 2)).toEqual([3, 3]);
   });
 
   test(`should return a part equals to a value
