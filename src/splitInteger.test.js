@@ -10,7 +10,7 @@ a value is divisible by a numberOfParts`, () => {
 
 test(`should return a part equals to a value
  when splitting into 1 part`, () => {
-  expect(splitInteger(8, 1)).toHaveLength(1);
+  expect(splitInteger(8, 1)).toEqual([8]);
 });
 
 test('should sort parts ascending if they are not equal', () => {
@@ -18,5 +18,5 @@ test('should sort parts ascending if they are not equal', () => {
 });
 
 test('should add zeros if value < numberOfParts', () => {
-  expect(splitInteger(5, 4)).toEqual([1, 1, 1, 2]);
+  expect(splitInteger(5, 6)).toEqual([0, 1, 1, 1, 1, 1]);
 });
