@@ -1,5 +1,5 @@
 'use strict';
-/* eslint-disable */
+/* eslint-disable */ //я прибрав лінт бо воно ругалося на дліну назв тестів
 
 const splitInteger = require('./splitInteger');
 
