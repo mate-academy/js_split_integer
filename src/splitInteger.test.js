@@ -28,3 +28,9 @@ test('should add zeros if value < numberOfParts', () => {
 
   expect(result).toEqual([0, 0, 1]);
 });
+
+test('should return an empty error if numberOfParts is zero', () => {
+  const result = splitInteger(8, 0);
+
+  expect(result).toEqual([]);
+});
