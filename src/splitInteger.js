@@ -7,18 +7,14 @@
  */
 
 function splitInteger(value, numberOfParts) {
-  let parts = [];
+  const parts = [];
   let rest = value;
 
-  if (value > numberOfParts) {
-    for (let partsLeft = numberOfParts; partsLeft > 0; partsLeft--) {
-      const part = Math.floor(rest / partsLeft);
+  for (let partsLeft = numberOfParts; partsLeft > 0; partsLeft--) {
+    const part = Math.floor(rest / partsLeft);
 
-      parts.push(part);
-      rest -= part;
-    }
-  } else {
-    parts = Array(numberOfParts).fill(0);
+    parts.push(part);
+    rest -= part;
   }
 
   return parts;
