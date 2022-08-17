@@ -14,7 +14,7 @@ function splitInteger(value, numberOfParts) {
     parts.push(part);
     rest -= part;
   }
-
+  
   return parts;
 }
 
