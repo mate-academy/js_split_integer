@@ -1,4 +1,4 @@
-# QA: Split integer ([uk](readme.uk.md), [ru](readme.ru.md))
+# QA: Split integer ([uk](readme.uk.md))
 Write tests for `splitInteger` function that takes 2 positive integers `value`
 and `numberOfParts` and returns an array containing exactly `numberOfParts` 
 integer elements.
