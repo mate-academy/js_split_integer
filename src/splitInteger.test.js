@@ -1,11 +1,15 @@
+'use strict';
+
 const splitInteger = require('./splitInteger');
 
+// eslint-disable-next-line
 test(`should split a number into equal parts if a value is divisible by a numberOfParts`, () => {
   const splitedNumber = splitInteger(6, 2);
 
   expect(splitedNumber).toEqual([3, 3]);
 });
 
+// eslint-disable-next-line
 test(`should return a part equals to a value when splitting into 1 part`, () => {
   const splitedNumber = splitInteger(8, 1);
 
