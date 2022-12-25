@@ -18,10 +18,9 @@ a value when splitting into 1 part`, () => {
 });
 
 test('should sort parts ascending if they are not equal', () => {
-  const splitedData = splitInteger(10, 5);
+  const splitedNumber = splitInteger(32, 6);
 
-  expect(splitedData)
-    .toEqual([2, 2, 2, 2, 2]);
+  expect(splitedNumber).toEqual([5, 5, 5, 5, 6, 6]);
 });
 
 test('should add zeros if value < numberOfParts', () => {
