@@ -11,10 +11,10 @@ test(`should return array`, () => {
 
 test(`should split a number into equal parts
   if a value is divisible by a numberOfParts`, () => {
-  const parts = splitInteger(32, 6);
+  const parts = splitInteger(10, 2);
 
   expect(parts)
-    .toEqual([5, 5, 5, 5, 6, 6]);
+    .toEqual([5, 5]);
 });
 
 test(`should return a part equals to a value
