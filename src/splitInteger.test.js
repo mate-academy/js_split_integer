@@ -52,8 +52,8 @@ test('should add zeros if value < numberOfParts', () => {
   const numberOfParts = 7;
   const arr = splitInteger(value, numberOfParts);
 
-  const actual = arr[0];
-  const expected = 0;
+  const actual = arr.findIndex(item => item > 0) > 0;
+  const expected = true;
 
   expect(actual)
     .toBe(expected);
