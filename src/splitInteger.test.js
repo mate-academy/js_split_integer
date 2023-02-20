@@ -9,10 +9,9 @@ test(`should split a number into equal parts
   const arr = splitInteger(value, numberOfParts);
 
   const actual = arr.every(item => item === 100 / 5);
-  const expected = true;
 
   expect(actual)
-    .toBe(expected);
+    .toBeTruthy();
 });
 
 test(`should return a part equals to a value
@@ -25,10 +24,9 @@ test(`should return a part equals to a value
   const isFirstElementEqualValue = arr[0] === 100;
 
   const actual = onlyOneElement && isFirstElementEqualValue;
-  const expected = true;
 
   expect(actual)
-    .toBe(expected);
+    .toBeTruthy();
 });
 
 test('should sort parts ascending if they are not equal', () => {
@@ -41,10 +39,9 @@ test('should sort parts ascending if they are not equal', () => {
       return arr[i] - arr[i - 1];
     })
     .every(e => e >= 0);
-  const expected = true;
 
   expect(actual)
-    .toBe(expected);
+    .toBeTruthy();
 });
 
 test('should add zeros if value < numberOfParts', () => {
@@ -52,9 +49,8 @@ test('should add zeros if value < numberOfParts', () => {
   const numberOfParts = 7;
   const arr = splitInteger(value, numberOfParts);
 
-  const actual = arr.findIndex(item => item > 0) > 0;
-  const expected = true;
+  const actual = arr.findIndex(item => item > 0);
 
   expect(actual)
-    .toBe(expected);
+    .toBeGreaterThan(0);
 });
