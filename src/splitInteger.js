@@ -1,10 +1,12 @@
+'use strict';
+
 /**
  * @param {number} value
  * @param {number} numberOfParts
  *
  * @returns {number[]}
  */
-// eslint-disable-next-line strict
+
 function splitInteger(value, numberOfParts) {
   const parts = [];
   let rest = value;
