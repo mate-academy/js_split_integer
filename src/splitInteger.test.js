@@ -9,12 +9,10 @@ test(`should split a number into equal parts if a value
 
 test(`should return a part equals to a value
   when splitting into 1 part`, () => {
-  const mas = [4];
-
-  expect(splitInteger(4, 1).length).toEqual(mas.length);
+  expect(splitInteger(4, 1).length).toEqual(1);
 });
 
-test('should return corect equal', () => {
+test('should return an array containing integer elements', () => {
   expect(splitInteger(8, 1)).toEqual([8]);
   expect(splitInteger(6, 2)).toEqual([3, 3]);
   expect(splitInteger(17, 4)).toEqual([4, 4, 4, 5]);
@@ -22,9 +20,15 @@ test('should return corect equal', () => {
 });
 
 test('should add zeros if value < numberOfParts', () => {
-  expect(splitInteger(3, 5).length).toEqual(5);
+  // expect(splitInteger(3, 5).length).toEqual(5);
+  expect(splitInteger(3, 5)).toEqual([0, 0, 1, 1, 1]);
 });
 
-test('should returns a object', () => {
+test('should return an object', () => {
   expect(typeof splitInteger(8, 1)).toBe('object');
+});
+
+test('should be declared', () => {
+  expect(splitInteger)
+    .toBeInstanceOf(Function);
 });
