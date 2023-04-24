@@ -4,10 +4,10 @@ const splitInteger = require('./splitInteger');
 
 test(`should split a number into equal parts
   if a value is divisible by a numberOfParts`, () => {
-  const fun = splitInteger(17, 4);
+  const fun = splitInteger(6, 3);
 
   expect(fun)
-    .toEqual([4, 4, 4, 5]);
+    .toEqual([2, 2, 2]);
 });
 
 test(`should return a part equals to a value
