@@ -8,13 +8,28 @@ test(`should split a number into equal parts
     .toEqual([3, 3]);
 });
 
+test(`should return 0's if value = 0`, () => {
+  expect(splitInteger(0, 5))
+    .toEqual([0, 0, 0, 0, 0]);
+});
+
+test(`should return an empty array if numberOfParts = 0`, () => {
+  expect(splitInteger(2, 0))
+    .toEqual([]);
+});
+
+test(`should return an empty array if inputs are negative`, () => {
+  expect(splitInteger(-2, -1))
+    .toEqual([]);
+});
+
 test(`should return a part equals to a value
   when splitting into 1 part`, () => {
   expect(splitInteger(2, 1))
     .toEqual([2]);
 });
 
-test('should sort parts ascending if they are not equal', () => {
+test('should sort positive integer parts ascending if they are not equal', () => {
   expect(splitInteger(7, 3))
     .toEqual([2, 2, 3]);
 });
