@@ -7,7 +7,7 @@ test(`should split a number into equal parts
   const goals = splitInteger(6, 2);
 
   expect(goals)
-    .toEqual([3, 3]);
+    .toStrictEqual([3, 3]);
 });
 
 test(`should return a part equals to a value
@@ -15,19 +15,19 @@ test(`should return a part equals to a value
   const goals = splitInteger(8, 1);
 
   expect(goals)
-  .toEqual([8]);
+  .toStrictEqual([8]);
 });
 
 test('should sort parts ascending if they are not equal', () => {
   const goals = splitInteger(17, 4);
 
   expect(goals)
-    .toEqual([4, 4, 4, 5]);
+    .toStrictEqual([4, 4, 4, 5]);
 });
 
 test('should add zeros if value < numberOfParts', () => {
   const goals = splitInteger(4, 5);
 
   expect(goals)
-    .toEqual([0, 1, 1, 1, 1]);
+    .toStrictEqual([0, 1, 1, 1, 1]);
 });
