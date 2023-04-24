@@ -24,4 +24,10 @@ describe('splitInteger', () => {
     expect(splitInteger(2, 4))
       .toEqual([0, 0, 1, 1]);
   });
+
+  // eslint-disable-next-line max-len
+  test('should return an array containing 1 when both value and numberOfParts are 1', () => {
+    expect(splitInteger(1, 1))
+      .toEqual([1]);
+  });
 });
