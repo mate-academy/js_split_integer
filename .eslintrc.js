@@ -5,8 +5,9 @@ module.exports = {
   },
   rules: {
     'no-proto': 0,
-    strict: 0,
-    'max-len': 0,
+    'max-len': ['error', 100],
+    'strict': ['error', 'global']
   },
   plugins: ['jest']
+  
 };
