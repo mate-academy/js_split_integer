@@ -21,5 +21,5 @@ test('should sort parts ascending if they are not equal', () => {
 
 test('should add zeros if value < numberOfParts', () => {
   expect(splitInteger(2, 6))
-    .toStrictEqual([0, 0, 0, 0, 1, 1]);
+    .toStrictEqual([0, 0, 0, 0, 1, 1])
 });
