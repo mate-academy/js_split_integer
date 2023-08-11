@@ -23,3 +23,4 @@ test('should add zeros if value < numberOfParts', () => {
   expect(splitInteger(2, 4))
     .toStrictEqual([0, 0, 1, 1]);
 });
+
