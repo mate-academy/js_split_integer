@@ -15,9 +15,11 @@ test(`should return a part equals to a value
 });
 
 test('should sort parts ascending if they are not equal', () => {
-
+  expect(splitInteger(17, 4))
+    .toEqual([4, 4, 4, 5]);
 });
 
 test('should add zeros if value < numberOfParts', () => {
-
+  expect(splitInteger(3, 4))
+    .toEqual([0, 1, 1, 1]);
 });
