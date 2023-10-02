@@ -19,14 +19,14 @@ test(`should return a part equals to a value
 });
 
 test('should sort parts ascending if they are not equal', () => {
-  const result = splitInteger(20, [4]);
+  const result = splitInteger(20, 4);
 
   expect(result)
     .toEqual([5, 5, 5, 5]);
 });
 
 test('should add zeros if value < numberOfParts', () => {
-  const result = splitInteger(5, [7]);
+  const result = splitInteger(5, 7);
 
   expect(result)
     .toEqual([0, 0, 1, 1, 1, 1, 1]);
