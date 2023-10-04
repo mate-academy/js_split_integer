@@ -23,3 +23,13 @@ test('should add zeros if value < numberOfParts', () => {
   expect(splitInteger(3, 5))
     .toEqual([0, 0, 1, 1, 1]);
 });
+
+test('should return an array with 1 if value = numberOfParts', () => {
+  expect(splitInteger(3, 3))
+    .toEqual([1, 1, 1]);
+});
+
+test('should return an empty array if numberOfParts = 0', () => {
+  expect(splitInteger(12, 0))
+    .toEqual([]);
+});
