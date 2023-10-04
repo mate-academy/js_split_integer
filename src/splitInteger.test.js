@@ -23,3 +23,16 @@ test('should add zeros if value < numberOfParts', () => {
   expect(splitInteger(4, 8))
     .toEqual([0, 0, 0, 0, 1, 1, 1, 1]);
 });
+
+test('should return empty array for zero values', () => {
+  expect(splitInteger(0, 0))
+    .toEqual([]);
+});
+
+test('the difference between max and min values should be <= 1', () => {
+  const result = splitInteger(50, 8);
+  const lastIndex = result.length - 1;
+
+  expect(result[lastIndex] - result[0] <= 1)
+    .toBeTruthy();
+});
