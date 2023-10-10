@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * @param {number} value
  * @param {number} numberOfParts
@@ -17,5 +19,4 @@ function splitInteger(value, numberOfParts) {
 
   return parts;
 }
-
 module.exports = splitInteger;
