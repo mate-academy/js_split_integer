@@ -19,7 +19,7 @@ test('should sort parts ascending if they are not equal', () => {
     .toEqual([7, 7, 8, 8]);
 });
 
-test('should add zeros if value < numberOfParts', () => {
+test('should add zeros if value is < numberOfParts', () => {
   expect(splitInteger(3, 5))
     .toEqual([0, 0, 1, 1, 1]);
 });
