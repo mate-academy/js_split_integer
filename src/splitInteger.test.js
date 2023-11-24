@@ -9,20 +9,20 @@ test(`should split a number into equal parts
 
 test(`should return a part equals to a value
   when splitting into 1 part`, () => {
-
+  expect(splitInteger(8, 1)).toEqual([8]);
 });
 
 test('should sort parts ascending if they are not equal', () => {
-
+  expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
 });
 
 test('should add zeros if value < numberOfParts', () => {
-
+  expect(splitInteger(1, 5)).toEqual([ 0, 0, 0, 0, 1 ]);
 });
 
 test(`should return the difference between the max and min number 
   in the array <= 1`, () => {
-  const array = splitInteger(1000, 3);
+  const array = splitInteger(62, 8);
 
   const min = Math.min(...array);
   const max = Math.max(...array);
@@ -34,16 +34,5 @@ test(`should return the difference between the max and min number
 });
 
 test('The array should be sorted ascending (from lowest to highest)', () => {
-  const array = splitInteger(600, 2);
-  let result = false;
-
-  for (let i = 1; i < array.length; i++) {
-    if (array[i] < array[i - 1]) {
-      expect(result).toBe(true);
-    }
-  }
-
-  result = true;
-  // Use the toBeSorted matcher to check if the array is sorted
-  expect(result).toBe(true);
+  expect(splitInteger(17, 4)).toEqual(splitInteger(17, 4).toSorted());
 });
