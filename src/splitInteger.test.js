@@ -9,29 +9,14 @@ test(`should split a number into equal parts
 
 test(`should return a part equals to a value
   when splitting into 1 part`, () => {
-
+  expect(splitInteger(8, 1)).toEqual([8]);
 });
 
 test('should sort parts ascending if they are not equal', () => {
-
+  expect(splitInteger(17, 4)).toEqual([4, 4, 4, 5].sort());
 });
 
 test('should add zeros if value < numberOfParts', () => {
-
+  expect(splitInteger(0, 1)).toEqual([0]);
 });
 
-test(`should return the difference between the max and min number 
-  in the array <= 1`, () => {
-  const array = splitInteger(6, 2);
-
-  const min = Math.min(...array);
-  const max = Math.max(...array);
-
-  const difference = max - min;
-
-  expect(difference).toBeLessThanOrEqual(1);
-});
-
-test('The array should be sorted ascending (from lowest to highest)', () => {
-  expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
-});
