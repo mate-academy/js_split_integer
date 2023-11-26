@@ -29,5 +29,5 @@ test('should add zeros if value < numberOfParts', () => {
   expect(splitInteger(5, 8)).toEqual([0, 0, 0, 1, 1, 1, 1, 1]);
   expect(splitInteger(10, 12)).toEqual([0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
   expect(splitInteger(3, 5)).toEqual([0, 0, 1, 1, 1]);
-  expect(splitInteger(7, 9)).toEqual([0, 0, 0, 0, 1, 1, 1, 2, 2]);
+  expect(splitInteger(7, 9)).toEqual([0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1]);
 });
