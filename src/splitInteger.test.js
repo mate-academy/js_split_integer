@@ -26,11 +26,39 @@ describe('splitInteger', () => {
       ]);
   });
 
-  test('should sort parts ascending if they are not equal', () => {
+  test('should sort parts ascending 2 case if they are not equal', () => {
     expect(splitInteger(32, 6))
       .toEqual([
         5, 5, 5, 5, 6, 6,
       ]);
+  });
+
+  test('should return empty array', () => {
+    expect(splitInteger('gjhg', 'eve'))
+    .toEqual([
+      ,
+    ]);
+  });
+
+  test('should return empty array if input is special symbols', () => {
+    expect(splitInteger('@', '@'))
+    .toEqual([
+      ,
+    ]);
+  });
+
+  test('should return empty array if input is 0', () => {
+    expect(splitInteger(0, 0))
+    .toEqual([
+      ,
+    ]);
+  });
+
+  test('should return empty array if input is < 0', () => {
+    expect(splitInteger(-5, -10))
+    .toEqual([
+      ,
+    ]);
   });
 
   test('should add zeros if value < numberOfParts', () => {
