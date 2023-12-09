@@ -4,12 +4,12 @@ const splitInteger = require('./splitInteger');
 
 test(`should split a number into equal parts
   if a value is divisible by a numberOfParts`, () => {
-    expect(splitInteger(6, 2)).toBe([3, 3]);
+  expect(splitInteger(6, 2)).toBe([3, 3]);
 });
 
 test(`should return a part equals to a value
   when splitting into 1 part`, () => {
-    expect(splitInteger(8, 1)).toBe([8]);
+  expect(splitInteger(8, 1)).toBe([8]);
 });
 
 test('should sort parts ascending if they are not equal', () => {
