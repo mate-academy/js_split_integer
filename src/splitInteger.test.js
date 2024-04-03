@@ -2,7 +2,8 @@
 
 const splitInteger = require('./splitInteger');
 
-test('Split integer into 1 part', () => {
+test(`should return a part equals to a value
+when splitting into 1 part`, () => {
   expect(splitInteger(8, 1)).toEqual([8]);
 });
 
