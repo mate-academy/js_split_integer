@@ -16,6 +16,12 @@ test('should sort parts ascending if they are not equal', () => {
   expect(splitInteger(15, 3)).toStrictEqual([5, 5, 5]);
 });
 
+test(`should ensure the difference between the max and min is <= 1`, () => {
+  const result = splitInteger(17, 4);
+
+  expect(Math.max(...result) - Math.min(...result)).toBeLessThanOrEqual(1);
+});
+
 test('should add zeros if value < numberOfParts', () => {
   expect(splitInteger(3, 6)).toStrictEqual([0, 0, 0, 1, 1, 1]);
 });
