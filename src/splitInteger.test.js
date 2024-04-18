@@ -20,29 +20,17 @@ test(`should return a part equals to a value
 });
 
 test('should sort parts ascending if they are not equal', () => {
-  let result = splitInteger(16, 3);
+  const result = splitInteger(16, 3);
 
-  for (let i = 0; i < result.length - 1; i++) {
-    if (result[i] > result[i + 1]) {
-      result = false;
-    }
-  }
-  expect(result).toBeTruthy();
+  expect(result).toEqual([5, 5, 6]);
 });
 
 test('should add zeros if value < numberOfParts', () => {
   const value = 2;
-  const numberOfParts = 3;
+  const numberOfParts = 4;
   const result = splitInteger(value, numberOfParts);
 
-  if (value < numberOfParts) {
-    for (let i = 0; i < result.length - 1; i++) {
-      (result[i] = result[i + 1]);
-    }
-    result[result.length - 1] = 0;
-  }
-  expect(result.length).toEqual(numberOfParts);
-  expect(result[result.length - 1]).toEqual(0);
+  expect(result).toEqual([0, 0, 1, 1]);
 }
 
 );
