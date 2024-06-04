@@ -2,15 +2,15 @@
 
 const { splitInteger } = require('./splitInteger');
 
-describe(`'splitInteger' should`, () => {
+describe(`'splitInteger'`, () => {
   test(`return an array`, () => {
     const result = splitInteger(12, 5);
 
     expect(result).toBeInstanceOf(Array);
   });
 
-  test(`split a number into equal parts
-    if a value is divisible by a numberOfParts`, () => {
+  test(`split a number into equal parts`
+    + `if a value is divisible by a numberOfParts`, () => {
     const result = splitInteger(12, 5);
 
     expect(result).toEqual([2, 2, 2, 3, 3]);
