@@ -3,7 +3,6 @@
 const { splitInteger } = require('./splitInteger');
 
 describe(`'splitInteger' should`, () => {
-
   test(`return an array`, () => {
     const result = splitInteger(12, 5);
 
