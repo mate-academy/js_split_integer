@@ -1,21 +1,20 @@
-/**
- * @param {number} value
- * @param {number} numberOfParts
- *
- * @returns {number[]}
- */
+// splitInteger.js
 function splitInteger(value, numberOfParts) {
-  const parts = [];
-  let rest = value;
+  const result = [];
+  const baseValue = Math.floor(value / numberOfParts);
+  const remainder = value % numberOfParts;
 
-  for (let partsLeft = numberOfParts; partsLeft > 0; partsLeft--) {
-    const part = Math.floor(rest / partsLeft);
+  for (let i = 0; i < numberOfParts; i++) {
 
-    parts.push(part);
-    rest -= part;
+    if (i < remainder) {
+      result.push(baseValue + 1);
+    } else {
+
+      result.push(baseValue);
+    }
   }
 
-  return parts;
+  return result.sort((a, b) => a - b);
 }
 
 module.exports = splitInteger;
