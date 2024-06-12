@@ -1,21 +1,15 @@
-/**
- * @param {number} value
- * @param {number} numberOfParts
- *
- * @returns {number[]}
- */
+'use strict';
+
 function splitInteger(value, numberOfParts) {
-  const parts = [];
-  let rest = value;
+  const partSize = Math.floor(value / numberOfParts);
+  const parts = new Array(numberOfParts).fill(partSize);
+  const remainder = value % numberOfParts;
 
-  for (let partsLeft = numberOfParts; partsLeft > 0; partsLeft--) {
-    const part = Math.floor(rest / partsLeft);
-
-    parts.push(part);
-    rest -= part;
+  for (let i = 0; i < remainder; i++) {
+    parts[i]++;
   }
 
-  return parts;
+  return parts.sort((a, b) => a - b);
 }
 
 module.exports = splitInteger;
