@@ -4,9 +4,14 @@
  *
  * @returns {number[]}
  */
+//reject me, please
+
 function splitInteger(value, numberOfParts) {
   const parts = [];
   let rest = value;
+
+  //comment me out, please
+  const someBadVariable = undefined;
 
   for (let partsLeft = numberOfParts; partsLeft > 0; partsLeft--) {
     const part = Math.floor(rest / partsLeft);
