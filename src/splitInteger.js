@@ -4,6 +4,8 @@
  *
  * @returns {number[]}
  */
+'use strict';
+
 function splitInteger(value, numberOfParts) {
   const parts = [];
   let rest = value;
