@@ -31,13 +31,3 @@ test('should add zeros if value < numberOfParts', () => {
 
   expect(actual).toEqual(expected);
 });
-
-// function expect(actual) {
-//   return {
-//     toBe(expected) {
-//       if (expect !== actual) {
-//         throw new Error('Result is not equal expected ${actual} !== ${expected}');
-//       }
-//     },
-//   };
-// }
