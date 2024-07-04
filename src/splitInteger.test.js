@@ -18,13 +18,8 @@ test(`should return a part equals to a value
 });
 
 test('should sort parts ascending if they are not equal', () => {
-  const result = splitInteger(15, 4);
-
-  expect(result).toEqual(result.slice().sort((a, b) => a - b));
-
-  const anotherResult = splitInteger(30, 6);
-
-  expect(anotherResult).toEqual(anotherResult.slice().sort((a, b) => a - b));
+  expect(splitInteger(15, 4)).toEqual([3, 4, 4, 4]);
+  expect(splitInteger(29, 6)).toEqual([4, 5, 5, 5, 5, 5]);
 });
 
 test('should add zeros if value < numberOfParts', () => {
