@@ -27,8 +27,7 @@ describe('split integer tests', () => {
     const value = 5;
     const numberOfParts = 3;
     const expected = [1, 2, 2];
-    const result = splitInteger(value, numberOfParts)
-      .sort((a, b) => a - b);
+    const result = splitInteger(value, numberOfParts).sort((a, b) => a - b);
 
     expect(result).toEqual(expected);
   });
@@ -37,8 +36,7 @@ describe('split integer tests', () => {
     const value = 5;
     const numberOfParts = 7;
     const expected = [0, 0, 1, 1, 1, 1, 1];
-    const result = splitInteger(value, numberOfParts)
-      .sort((a, b) => a - b);
+    const result = splitInteger(value, numberOfParts).sort((a, b) => a - b);
 
     expect(result).toEqual(expected);
     expect(result).toContain(0);
