@@ -4,36 +4,18 @@ const splitInteger = require('./splitInteger');
 
 test(`should split a number into equal parts
   if a value is divisible by a numberOfParts`, () => {
-    let result = splitInteger(6, 2); 
-    let expected = [3, 3];
-    if (result !== expected) {
-      throw new Error(`${result} is not equql to ${expected}`);
-    }
-
+    expect(splitInteger(16, 4)).toEqual([4, 4, 4, 4]);
 });
 
 test(`should return a part equals to a value
   when splitting into 1 part`, () => {
-    let result = splitInteger(8, 1); 
-    let expected = [3];
-    if (result !== expected) {
-      throw new Error(`${result} is not equql to ${expected}`);
-    }
+    expect(splitInteger(8,1)).toEqual([8]);
 });
 
 test('should sort parts ascending if they are not equal', () => {
-  let result = splitInteger(17, 4); 
-    let expected = [4, 4, 4, 5];
-    if (result !== expected) {
-      throw new Error(`${result} is not equql to ${expected}`);
-    }
+  expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
 });
 
 test('should add zeros if value < numberOfParts', () => {
-  let result = splitInteger(1, 2); 
-    let expected = [0, 1];
-    if (result !== expected) {
-      throw new Error(`${result} is not equql to ${expected}`);
-    }
+  expect(splitInteger(1,2)).toEqual([0, 1]);
 });
-
