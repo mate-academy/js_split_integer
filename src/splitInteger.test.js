@@ -1,32 +1,32 @@
 'use strict';
 
-const splitInteger = require('./splitInteger');
+describe('getCoinCombination', () => {
+  const { getCoinCombination } = require('./getCoinCombination');
 
-test(`should split a number into equal parts
-  if a value is divisible by a numberOfParts`, () => {
-  let actual = splitInteger(10, 2);
-  let expected = [5, 5];
-  expect(actual).toEqual(expected);
-});
+  it(`should be declared`, () => {
+    expect(getCoinCombination)
+      .toBeInstanceOf(Function);
+  });
 
-test(`should return a part equals to a value
-  when splitting into 1 part`, () => {
-    let actual = splitInteger(9, 1);
-    let expected = [9];
-    expect(actual).toEqual(expected);
-
-});
-
-test('should sort parts ascending if they are not equal', () => {
-  let actual = splitInteger(10, 3);
-  let expected = [3, 3, 4];
-  expect(actual).toEqual(expected);
-
-});
-
-test('should add zeros if value < numberOfParts', () => {
-  let actual = splitInteger(3, 5);
-  let expected = [0, 0, 1, 1, 1];
-  expect(actual).toEqual(expected);
-
+  test('returns correct coin combination for 1 cent', () => {
+expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
+  })
+  test ('returns correct coin combination for 6 cents', () => {
+    expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
+  })
+  test ('returns correct coin combination for 17 cents', () => {
+    expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
+  })
+  test ('returns correct coin combination for 50 cents', () => {
+    expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
+  })
+  test ('returns correct coin combination for 0 cents', () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
+  })
+  test ('returns correct coin combination for 100 cents', () => {
+    expect(getCoinCombination(100)).toEqual([0, 0, 0, 4]);
+  })
+  test ('returns correct coin combination for 99 cents', () => {
+    expect(getCoinCombination(99)).toEqual([4, 0, 2, 3]);
+  })
 });
