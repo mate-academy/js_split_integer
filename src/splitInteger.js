@@ -4,6 +4,7 @@
  *
  * @returns {number[]}
  */
+
 function splitInteger(value, numberOfParts) {
   const parts = [];
   let rest = value;
@@ -12,6 +13,7 @@ function splitInteger(value, numberOfParts) {
     const part = Math.floor(rest / partsLeft);
 
     parts.push(part);
+
     rest -= part;
   }
 
