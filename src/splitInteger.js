@@ -1,3 +1,6 @@
+// eslint-disable-next-line quotes
+"use strict";
+
 /**
  * @param {number} value
  * @param {number} numberOfParts
