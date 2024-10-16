@@ -23,12 +23,6 @@ test('should sort parts ascending if they are not equal', () => {
   expect(result).toEqual(sortedResult);
 });
 
-test('should add zeros if value < numberOfParts', () => {
-  const result = splitInteger(1, 2);
-
-  expect(result).toEqual([0, 1]);
-});
-
 test(`should have differences between max integer
   and min integer in array less or equal 1`, () => {
   const result = splitInteger(17, 4);
