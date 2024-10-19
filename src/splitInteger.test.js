@@ -2,7 +2,6 @@
 
 const splitInteger = require('./splitInteger');
 
-
 test(`should split a number into equal parts
   if a value is divisible by a numberOfParts`, () => {
   const numberToSplit = 12;
@@ -28,7 +27,7 @@ test('should sort parts ascending if they are not equal', () => {
   const numberOfParts = 5;
   const result = splitInteger(numberToSplit, numberOfParts);
 
-  const sortedArr = [...result].sort((a, b) => a - b)
+  const sortedArr = [...result].sort((a, b) => a - b);
 
   expect(result).toEqual(sortedArr);
 });

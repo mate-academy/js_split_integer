@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * @param {number} value
  * @param {number} numberOfParts
@@ -19,8 +21,6 @@ function splitInteger(value, numberOfParts) { // 16, 4
 }
 
 module.exports = splitInteger;
-
-
 
 // function sortArray(arr) {
 //   const arrSorted = arr.sort((a, b) => a - b)
