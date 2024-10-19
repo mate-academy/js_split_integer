@@ -4,7 +4,7 @@
  *
  * @returns {number[]}
  */
-function splitInteger(value, numberOfParts) {
+function splitInteger(value, numberOfParts) { // 16, 4
   const parts = [];
   let rest = value;
 
@@ -19,3 +19,11 @@ function splitInteger(value, numberOfParts) {
 }
 
 module.exports = splitInteger;
+
+
+
+// function sortArray(arr) {
+//   const arrSorted = arr.sort((a, b) => a - b)
+
+//   return arrSorted;
+// }
