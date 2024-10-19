@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * @param {number} value
  * @param {number} numberOfParts
