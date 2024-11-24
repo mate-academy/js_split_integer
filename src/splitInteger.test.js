@@ -22,4 +22,4 @@ test('should add zeros if value < numberOfParts', () => {
 
 test('should return empty array if numberOfParts is 0', () => {
   expect(splitInteger(9, 0)).toEqual([]);
-})
+});
