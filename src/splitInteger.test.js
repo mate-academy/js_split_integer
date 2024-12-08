@@ -1,3 +1,5 @@
+'use strict';
+
 const splitInteger = require('./splitInteger');
 
 test(`should split a number into equal parts
