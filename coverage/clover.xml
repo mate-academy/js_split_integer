@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1739382004762" clover="3.2.0">
+  <project timestamp="1739382004763" name="All files">
+    <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="9" coveredelements="9" complexity="0" loc="8" ncloc="8" packages="1" files="1" classes="1"/>
+    <file name="splitInteger.js" path="C:\Users\patry\js_split_integer\src\splitInteger.js">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="10" count="8" type="stmt"/>
+      <line num="11" count="8" type="stmt"/>
+      <line num="13" count="8" type="stmt"/>
+      <line num="14" count="22" type="stmt"/>
+      <line num="16" count="22" type="stmt"/>
+      <line num="17" count="22" type="stmt"/>
+      <line num="20" count="8" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
