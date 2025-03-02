@@ -1,4 +1,5 @@
-'use strict';
+// eslint-disable-next-line quotes
+"use strict";
 
 /**
  * @param {number} value
