@@ -11,6 +11,17 @@
 Приклади:
 
 ```js
+describe('splitInteger', ()=>{
+const splitInteger = require('./splitInteger');
+
+test('value', () => {
+  expect(splitInteger)
+})
+
+
+})
+
+
 splitInteger(8, 1) === [8]
 splitInteger(6, 2) === [3, 3]
 splitInteger(17, 4) === [4, 4, 4, 5]
