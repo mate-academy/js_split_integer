@@ -6,6 +6,7 @@ function splitInteger(value, numberOfParts) {
 
   for (let partsLeft = numberOfParts; partsLeft > 0; partsLeft--) {
     const part = Math.floor(rest / partsLeft);
+
     parts.push(part);
     rest -= part;
   }
