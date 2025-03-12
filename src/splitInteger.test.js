@@ -2,20 +2,23 @@
 
 const splitInteger = require('./splitInteger');
 
-test(`should split a number into equal parts
-  if a value is divisible by a numberOfParts`, () => {
-
+// eslint-disable-next-line max-len
+test('треба розділити число на рівні частини якщо значення ділиться на numberOfParts', () => {
+  expect(splitInteger(12, 3)).toEqual([4, 4, 4]); // Рядок 7
+  expect(splitInteger(20, 4)).toEqual([5, 5, 5, 5]);
 });
 
-test(`should return a part equals to a value
-  when splitting into 1 part`, () => {
-
+test('має повернути частину, яка дорівнює значенню при поділі на 1 частину', () => {
+  expect(splitInteger(5, 1)).toEqual([5]); // Рядок 13
+  expect(splitInteger(100, 1)).toEqual([100]);
 });
 
-test('should sort parts ascending if they are not equal', () => {
-
+test('має сортувати частини за зростанням, якщо вони не рівні', () => {
+  expect(splitInteger(10, 3)).toEqual([3, 3, 4]); // Рядок 18
+  expect(splitInteger(17, 4)).toEqual([4, 4, 4, 5]);
 });
 
-test('should add zeros if value < numberOfParts', () => {
-
+test('слід додати нулі, якщо значення < numberOfParts', () => {
+  expect(splitInteger(3, 5)).toEqual([0, 0, 1, 1, 1]);
+  expect(splitInteger(1, 3)).toEqual([0, 0, 1]);
 });
