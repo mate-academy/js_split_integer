@@ -1,7 +1,9 @@
+'use strict';
+
 const splitInteger = require('./splitInteger');
 
 test('should split a number into equal parts if divisible by a numberOfParts', () => {
-  expect(splitInteger(10, 2)).toEqual([5, 5]);
+  expect(splitInteger(10, 20)).toEqual([5, 5]);
 });
 
 test('should return a part equal to a value when splitting into 1 part', () => {
