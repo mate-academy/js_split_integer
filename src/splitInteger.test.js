@@ -1,8 +1,10 @@
 /* eslint-disable max-len */
+
 'use strict';
 
 const splitInteger = require('./splitInteger');
 
+// eslint-disable-next-line max-len
 test('should split a number into equal parts if value is divisible by numberOfParts', () => {
   expect(splitInteger(8, 2)).toEqual([4, 4]);
   expect(splitInteger(9, 3)).toEqual([3, 3, 3]);
