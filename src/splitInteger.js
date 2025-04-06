@@ -14,12 +14,10 @@ function splitInteger(value, numberOfParts) {
     const part = Math.floor(rest / partsLeft);
 
     parts.push(part);
-    rest -= part; // rest = rest - part
+    rest -= part; // rest = rest - part;
   }
 
-  return parts;
+  return parts.sort((a, b) => a - b);
 }
 
 module.exports = splitInteger;
-
-
