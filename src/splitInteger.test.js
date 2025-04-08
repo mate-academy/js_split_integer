@@ -34,11 +34,15 @@ describe('splitInteger', () => {
     expect(splitInteger(100, 20)).toEqual([5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]);
   });
 
-  // New test case to ensure the output is sorted
+  // Updated test case to ensure the output is sorted
   test('should return the array sorted in ascending order', () => {
     const result = splitInteger(17, 4);
 
     expect(result).toEqual([4, 4, 4, 5]);
-    expect(result).toEqual(result.sort((a, b) => a - b)); // Ensure it is sorted
+
+    // eslint-disable-next-line max-len
+    const sortedResult = [...result].sort((a, b) => a - b); // Sort a copy of the array
+
+    expect(result).toEqual(sortedResult); // Compare original to sorted copy
   });
 });
