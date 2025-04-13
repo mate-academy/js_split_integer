@@ -4,7 +4,7 @@ const splitInteger = require('./splitInteger');
 
 test(`should split a number into equal parts
   if a value is divisible by a numberOfParts`, () => {
-  expect(splitInteger(17, 5)).toEqual([3, 3, 3, 4, 4]);
+  expect(splitInteger(17, 4)).toEqual([4, 4, 4, 5]);
 });
 
 test(`should return a part equals to a value
@@ -13,8 +13,7 @@ test(`should return a part equals to a value
 });
 
 test('should sort parts ascending if they are not equal', () => {
-  // eslint-disable-next-line max-len
-  expect(splitInteger(17, 4)).toEqual([...splitInteger(17, 4)].sort((a, b) => a - b));
+  expect(splitInteger(17, 4)).toEqual([4, 4, 4, 5]);
 });
 
 test('should add zeros if value < numberOfParts', () => {
