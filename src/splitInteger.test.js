@@ -17,7 +17,7 @@ test(`should return a part equals to a value
 });
 
 test('should sort parts ascending if they are not equal', () => {
-  const result = splitInteger(6, 1);
+  const result = splitInteger(7, 3);
 
   expect(result).toEqual([...result].sort((a, b) => a - b));
 });
