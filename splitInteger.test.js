@@ -14,7 +14,6 @@ test('should return a part equal to value when splitting into 1 part', () => {
 
 test('should sort parts ascending if they are not equal', () => {
   const result = splitInteger(17, 4);
-
   expect(result).toEqual([4, 4, 4, 5]);
   expect(result).toEqual([...result].sort((a, b) => a - b));
 });
@@ -58,7 +57,6 @@ test('should ensure the difference between max and min is at most 1', () => {
     const result = splitInteger(value, parts);
     const min = Math.min(...result);
     const max = Math.max(...result);
-
     expect(max - min).toBeLessThanOrEqual(1);
   }
 });
