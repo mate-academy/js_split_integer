@@ -21,11 +21,12 @@ test('should add zeros if value < numberOfParts', () => {
   expect(splitInteger(3, 5)).toEqual([0, 0, 1, 1, 1]);
 });
 
-test('should handle cases where the difference between max and min is <= 1', () => {
-  expect(splitInteger(5, 2)).toEqual([2, 3]);
-  expect(splitInteger(11, 3)).toEqual([3, 4, 4]);
-  expect(splitInteger(1, 10)).toEqual([0, 0, 0, 0, 0, 0, 0, 0, 0, 1]);
-});
+test(`should handle cases where the difference between max and min is <= 1`,
+  () => {
+    expect(splitInteger(5, 2)).toEqual([2, 3]);
+    expect(splitInteger(11, 3)).toEqual([3, 4, 4]);
+    expect(splitInteger(1, 10)).toEqual([0, 0, 0, 0, 0, 0, 0, 0, 0, 1]);
+  });
 
 test('should handle edge cases with small values and parts', () => {
   expect(splitInteger(0, 5)).toEqual([0, 0, 0, 0, 0]);
