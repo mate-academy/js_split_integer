@@ -1,6 +1,6 @@
-// eslint-disable-next-line no-unused-vars
-const splitInteger = require('./splitInteger');
+'use strict';
 
+const splitInteger = require('./splitInteger');
 
 describe('splitInteger', () => {
   test('returns [8] when value is 8 and numberOfParts is 1', () => {
