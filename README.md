@@ -8,7 +8,6 @@ integer elements.
 - The array should be sorted ascending (from lowest to highest)
 
 You don't need to validate arguments (they are always valid).
-
 Examples:
 
 ```js
@@ -17,6 +16,24 @@ splitInteger(6, 2) === [3, 3]
 splitInteger(17, 4) === [4, 4, 4, 5]
 splitInteger(32, 6) === [5, 5, 5, 5, 6, 6]
 ```
+function splitInteger(value, numberOfParts) {
+  const base = Math.floor(value / numberOfParts);
+  const remainder = value % numberOfParts;
+
+  const result = [];
+
+  for (let i = 0; i < numberOfParts - remainder; i++) {
+    result.push(base);
+  }
+
+  for (let i = 0; i < remainder; i++) {
+    result.push(base + 1);
+  }
+
+  return result;
+}
+
+module.exports = splitInteger;
 
 [Guideline](https://github.com/mate-academy/js_task-guideline/blob/master/README.md)
 
