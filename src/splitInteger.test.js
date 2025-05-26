@@ -8,7 +8,7 @@ test(`should split a number into equal parts
 });
 
 test(`should return a part equals to a value
-  when splitting into 1 part`, () => {
+  when splitting into one part`, () => {
   expect(splitInteger(6, 2)).toStrictEqual([3, 3]);
 });
 
