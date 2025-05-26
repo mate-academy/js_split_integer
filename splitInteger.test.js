@@ -1,3 +1,4 @@
+const splitInteger = require('./splitInteger');
 function splitInteger(value, numberOfParts) {
   const base = Math.floor(value / numberOfParts);
   const remainder = value % numberOfParts;
