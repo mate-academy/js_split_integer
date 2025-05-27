@@ -6,15 +6,16 @@
  *
  * @returns {number[]}
  */
+'use strict';
+
 function splitInteger(value, numberOfParts) {
-  const parts = [];
-  let rest = value;
+  const base = Math.floor(value / numberOfParts);
+  const remainder = value % numberOfParts;
 
-  for (let partsLeft = numberOfParts; partsLeft > 0; partsLeft--) {
-    const part = Math.floor(rest / partsLeft);
+  const parts = new Array(numberOfParts).fill(base);
 
-    parts.push(part);
-    rest -= part;
+  for (let i = numberOfParts - remainder; i < numberOfParts; i++) {
+    parts[i] += 1;
   }
 
   return parts;
