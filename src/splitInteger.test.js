@@ -7,15 +7,21 @@ test(`should split a number into equal parts
   const value = 12;
   const numberOfParts = 4;
   const expected = [3, 3, 3, 3];
- 
+
   const result = splitInteger(value, numberOfParts);
- 
-  expect(result).toEqual(expected); 
+
+  expect(result).toEqual(expected);
 });
 
 test(`should return a part equals to a value
   when splitting into 1 part`, () => {
+  const value = 10;
+  const numberOfParts = 1;
+  const expected = [10];
 
+  const result = splitInteger(value, numberOfParts);
+
+  expect(result).toEqual(expected);
 });
 
 test('should sort parts ascending if they are not equal', () => {
