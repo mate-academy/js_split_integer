@@ -27,7 +27,7 @@ test(`should return a part equals to a value
 test('should sort parts ascending if they are not equal', () => {
   const value = 13;
   const numberOfParts = 2;
-  const expected = [6,7];
+  const expected = [6, 7];
 
   const result = splitInteger(value, numberOfParts);
 
@@ -35,5 +35,11 @@ test('should sort parts ascending if they are not equal', () => {
 });
 
 test('should add zeros if value < numberOfParts', () => {
+  const value = 2;
+  const numberOfParts = 4;
+  const expected = [0, 0, 1, 1];
 
+  const result = splitInteger(value, numberOfParts);
+
+  expect(result).toEqual(expected);
 });
