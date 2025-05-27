@@ -1,0 +1,22 @@
+describe('splitInteger', () => {
+
+  test('should split 10 into 2 equal parts', () => {
+    expect(splitInteger(10, 2)).toEqual([5, 5]);
+  });
+
+  test('should split 10 into 3 parts (with remainder)', () => {
+    expect(splitInteger(10, 3)).toEqual([3, 3, 4]);
+  });
+
+  test('should split 7 into 3 parts (with remainder)', () => {
+    expect(splitInteger(7, 3)).toEqual([2, 2, 3]);
+  });
+
+  test('should split 1 into 1 part', () => {
+    expect(splitInteger(1, 1)).toEqual([1]);
+  });
+
+  test('should split 0 into 1 part', () => {
+    expect(splitInteger(0, 1)).toEqual([0]);
+  });
+}
