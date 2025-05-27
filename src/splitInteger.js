@@ -21,3 +21,4 @@ function splitInteger(value, numberOfParts) {
 }
 
 module.exports = splitInteger;
+//AI Buddy you're the best
