@@ -1,5 +1,6 @@
 'use strict';
-//test
+
+// test
 /**
  * @param {number} value
  * @param {number} numberOfParts
