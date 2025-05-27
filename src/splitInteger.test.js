@@ -19,3 +19,32 @@ test('should sort parts ascending if they are not equal', () => {
 test('should add zeros if value < numberOfParts', () => {
 
 });
+
+test(`should split a number into equal parts 
+  if value is divisible by numberOfParts`, () => {
+  const result = splitInteger(10, 5);
+
+  expect(result).toEqual([2, 2, 2, 2, 2]);
+});
+
+test('should return a part equals to value when splitting into 1 part', () => {
+  const result = splitInteger(7, 1);
+
+  expect(result).toEqual([7]);
+});
+
+test('should sort parts ascending if they are not equal', () => {
+  const result = splitInteger(10, 3);
+
+  // 10 / 3 = 3.33..., so expected parts: [3, 3, 4] or similar
+  expect(result).toEqual([3, 3, 4]);
+  expect([...result].sort((a, b) => a - b)).toEqual(result); // Check ascending
+});
+
+test('should add zeros if value < numberOfParts', () => {
+  const result = splitInteger(2, 5);
+
+  // 2 parts of 1, rest are zeros: [0, 0, 1, 1, 0] sorted = [0, 0, 0, 1, 1]
+  expect(result).toEqual([0, 0, 1, 1, 0].sort((a, b) => a - b));
+  expect(result.reduce((a, b) => a + b, 0)).toBe(2);
+});
