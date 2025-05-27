@@ -2,7 +2,7 @@
 
 /**
  * @param {number} value
- * @param {number} numberOfParts
+ * @param {number}  numberOfParts
  *
  * @returns {number[]}
  */
