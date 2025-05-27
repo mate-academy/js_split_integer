@@ -6,8 +6,6 @@
  *
  * @returns {number[]}
  */
-'use strict';
-
 function splitInteger(value, numberOfParts) {
   const base = Math.floor(value / numberOfParts);
   const remainder = value % numberOfParts;
@@ -18,7 +16,7 @@ function splitInteger(value, numberOfParts) {
     parts[i] += 1;
   }
 
-  return parts;
+  return parts.sort((a, b) => a - b);
 }
 
 module.exports = splitInteger;
