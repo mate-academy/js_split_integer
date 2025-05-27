@@ -19,3 +19,7 @@ test('should sort parts ascending if they are not equal', () => {
 test('should add zeros if value < numberOfParts', () => {
   expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
 });
+
+test('should return an emty array when amount is 0', () => {
+  expect(splitInteger(0, 4)).toEqual([0, 0, 0, 0]);
+});
