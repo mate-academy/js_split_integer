@@ -1,14 +1,14 @@
 'use strict';
 
 /**
- * @param {number} val
+ * @param {number} numVals
  * @param {number} numberOfParts
  *
  * @returns {number[]}
  */
-function splitInteger(val, numberOfParts) {
+function splitInteger(numVals, numberOfParts) {
   const parts = [];
-  let rest = val;
+  let rest = numVals;
 
   for (let partsLeft = numberOfParts; partsLeft > 0; partsLeft--) {
     const part = Math.floor(rest / partsLeft);
