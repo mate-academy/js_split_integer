@@ -11,9 +11,9 @@ test(`should split a number into equal parts
 
 test(`should return a part equals to a value
   when splitting into 1 part`, () => {
-  const result = splitInteger(8, 1);
+  const result = splitInteger(10, 1);
 
-  expect(result).toEqual([8]);
+  expect(result).toEqual([10]);
 });
 
 test('should sort parts ascending if they are not equal', () => {
