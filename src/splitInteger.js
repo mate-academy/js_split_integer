@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * @param {number} value
@@ -6,6 +6,7 @@
  *
  * @returns {number[]}
  */
+
 function splitInteger(value, numberOfParts) {
   const parts = [];
   let rest = value;
