@@ -7,6 +7,18 @@
  * @returns {number[]}
  */
 function splitInteger(value, numberOfParts) {
+  if (!Number.isInteger(value) || !Number.isInteger(numberOfParts)) {
+    throw new TypeError('Both value and numberOfParts must be integers');
+  }
+
+  if (numberOfParts <= 0) {
+    throw new RangeError('numberOfParts must be greater than zero');
+  }
+
+  if (value < 0) {
+    throw new RangeError('value must be non-negative');
+  }
+
   const parts = [];
   let rest = value;
 
@@ -16,6 +28,8 @@ function splitInteger(value, numberOfParts) {
     parts.push(part);
     rest -= part;
   }
+
+  parts.sort((a, b) => a - b);
 
   return parts;
 }
