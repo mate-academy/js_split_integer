@@ -13,6 +13,7 @@ Examples:
 
 ```js
 splitInteger(8, 1) === [8]
+
 splitInteger(6, 2) === [3, 3]
 splitInteger(17, 4) === [4, 4, 4, 5]
 splitInteger(32, 6) === [5, 5, 5, 5, 6, 6]
