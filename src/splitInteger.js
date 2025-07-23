@@ -7,17 +7,17 @@
  * @returns {number[]}
  */
 function splitInteger(value, numberOfParts) {
-  const parts = [];
+  const resParts = [];
   let rest = value;
 
   for (let partsLeft = numberOfParts; partsLeft > 0; partsLeft--) {
     const part = Math.floor(rest / partsLeft);
 
-    parts.push(part);
+    resParts.push(part);
     rest -= part;
   }
 
-  return parts;
+  return resParts;
 }
 
 module.exports = splitInteger;
