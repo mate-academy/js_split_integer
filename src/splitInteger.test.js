@@ -11,9 +11,10 @@ test(`should split a number into equal parts
 
 test(`should return a part equals to a value
   when splitting into 1 part`, () => {
-  const result = splitInteger(10, 1);
+  const value = 10;
+  const result = splitInteger(value, 1);
 
-  expect(result).toEqual([10]);
+  expect(result).toEqual([value]);
 });
 
 test('should sort parts ascending if they are not equal', () => {
