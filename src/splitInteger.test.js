@@ -4,7 +4,6 @@ const splitInteger = require('./splitInteger');
 
 test(`should split a number into equal parts
   if a value is divisible by a numberOfParts`, () => {
-
   const result = splitInteger(8, 2);
 
   expect(result).toEqual([4, 4]);
@@ -12,7 +11,6 @@ test(`should split a number into equal parts
 
 test(`should return a part equals to a value
   when splitting into 1 part`, () => {
-
   const result = splitInteger(8, 1);
 
   expect(result).toEqual([8]);

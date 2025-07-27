@@ -20,6 +20,4 @@ function splitInteger(value, numberOfParts) {
   return parts;
 }
 
-console.log(splitInteger());
-
 module.exports = splitInteger;
