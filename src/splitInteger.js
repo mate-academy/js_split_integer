@@ -17,7 +17,7 @@ function splitInteger(value, numberOfParts) {
     rest -= part;
   }
 
-  return parts;
+  return parts.sort((a, b) => a - b);
 }
 
 module.exports = splitInteger;
