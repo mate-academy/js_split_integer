@@ -11,10 +11,10 @@ function splitInteger(value, numberOfParts) {
   let rest = value;
 
   for (let partsLeft = numberOfParts; partsLeft > 0; partsLeft--) {
-    const part = Math.floor(rest / partsLeft);
+    const result = Math.floor(rest / partsLeft);
 
-    parts.push(part);
-    rest -= part;
+    parts.push(result);
+    rest -= result;
   }
 
   return parts;
