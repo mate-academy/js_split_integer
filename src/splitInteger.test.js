@@ -4,18 +4,22 @@ const splitInteger = require('./splitInteger');
 
 test(`should split a number into equal parts
   if a value is divisible by a numberOfParts`, () => {
-
+  expect(splitInteger(8, 1)).toEqual([8]);
 });
 
 test(`should return a part equals to a value
   when splitting into 1 part`, () => {
-
+  expect(splitInteger(8, 4)).toEqual([2, 2, 2, 2]);
 });
 
 test('should sort parts ascending if they are not equal', () => {
-
+  expect(splitInteger(7, 3)).toEqual([2, 2, 3]);
 });
 
 test('should add zeros if value < numberOfParts', () => {
+  const result = splitInteger(10, 3);
+  const min = Math.min(...result);
+  const max = Math.max(...result);
 
+  expect(max - min).toBeLessThanOrEqual(1);
 });
