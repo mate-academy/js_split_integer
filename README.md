@@ -1,5 +1,5 @@
 # QA: Split integer ([uk](readme.uk.md))
-
+- [DEMO LINK](https://NVlasenko.github.io/js_split_integer/)
 Write tests for `splitInteger` function that takes 2 positive integers `value`
 and `numberOfParts` and returns an array containing exactly `numberOfParts`
 integer elements.
