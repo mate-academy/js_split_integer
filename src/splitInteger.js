@@ -6,6 +6,7 @@
  *
  * @returns {number[]}
  */
+// eslint-disable-next-line no-unused-vars
 function splitInteger(value, numberOfParts) {
   const parts = [];
   let rest = value;
