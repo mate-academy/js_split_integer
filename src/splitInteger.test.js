@@ -1,6 +1,6 @@
 'use strict';
 
-const splitInteger = require('./splitInteger');
+const splitInteger = require('./splitInteger.js');
 
 test(`should split a number into equal parts
   if a value is divisible by a numberOfParts`, () => {
