@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * @param {number} value
@@ -16,8 +16,10 @@ function splitInteger(value, numberOfParts) {
     parts.push(part);
     rest -= part;
   }
+  parts.sort((a, b) => a - b);
 
   return parts;
 }
 
+// Sort the parts in ascending order
 module.exports = splitInteger;
