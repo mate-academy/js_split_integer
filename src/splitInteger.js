@@ -20,4 +20,5 @@ function splitInteger(value, numberOfParts) {
   return parts;
 }
 
+// Sort the parts in ascending order
 module.exports = splitInteger;
