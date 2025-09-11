@@ -20,4 +20,6 @@ function splitInteger(value, numberOfParts) {
   return parts;
 }
 
+// console.log(splitInteger(12, 0));
+
 module.exports = splitInteger;
