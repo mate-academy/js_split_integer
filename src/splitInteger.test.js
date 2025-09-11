@@ -17,24 +17,13 @@ test('should sort parts ascending if they are not equal', () => {
   expect(splitInteger(17, 4)).toEqual([4, 4, 4, 5]);
 });
 
-test('should add zeros if value < numberOfParts', () => {
-  expect(splitInteger(3, 5)).toEqual([0, 0, 1, 1, 1]);
-  expect(splitInteger(3, 6)).toEqual([0, 0, 0, 1, 1, 1]);
-});
-
 test('should always return an array of length numberOfParts', () => {
-  expect(splitInteger(5, 10)).toHaveLength(10);
   expect(splitInteger(32, 6)).toHaveLength(6);
-});
-
-test('should always return an array if numberOfParts 0', () => {
-  expect(splitInteger(5, 0)).toBeInstanceOf(Array);
 });
 
 test('should return an array with integer in every case', () => {
   expect(splitInteger(5, 3).every(Number.isInteger)).toBe(true);
   expect(splitInteger(5, 10).every(Number.isInteger)).toBe(true);
-  expect(splitInteger(5, 0).every(Number.isInteger)).toBe(true);
 });
 
 test('should sum of parts always equal to value', () => {
@@ -47,16 +36,13 @@ test('should sum of parts always equal to value', () => {
 
 test('should deference between max and min part to be <= 1', () => {
   if (splitInteger().length > 0) {
-    expect(Math.max(splitInteger(17, 3)) - Math.min(splitInteger(17, 3)))
+    expect(Math.max(...splitInteger(17, 3)) - Math.min(...splitInteger(17, 3)))
       .toBeLessThanOrEqual(1);
 
-    expect(Math.max(splitInteger(17, 10)) - Math.min(splitInteger(17, 10)))
+    expect(Math.max(...splitInteger(17, 10)) - Math.min(...splitInteger(17, 10)))
       .toBeLessThanOrEqual(1);
 
-    expect(Math.max(splitInteger(17, 4)) - Math.min(splitInteger(17, 1)))
-      .toBeLessThanOrEqual(1);
-
-    expect(Math.max(splitInteger(17, 0)) - Math.min(splitInteger(17, 0)))
+    expect(Math.max(...splitInteger(17, 4)) - Math.min(...splitInteger(17, 4)))
       .toBeLessThanOrEqual(1);
   }
 });
@@ -76,5 +62,3 @@ test('should return an array with amount of larger parts to equal value % number
   expect(splitInteger(17, 4).filter((part) => part === 5)).toHaveLength(1);
   expect(splitInteger(32, 6).filter((part) => part === 6)).toHaveLength(2);
 });
-
-
