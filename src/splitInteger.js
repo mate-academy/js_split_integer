@@ -19,20 +19,5 @@ function splitInteger(value, numberOfParts) {
 
   return parts;
 }
-function checkInvariants(result, value, numberOfParts) {
-  // length must equal numberOfParts
-  expect(result.length).toBe(numberOfParts);
-
-  // sum must equal value
-  expect(result.reduce((a, b) => a + b, 0)).toBe(value);
-
-  // must be sorted ascending
-  expect(result).toEqual([...result].sort((a, b) => a - b));
-
-  // max - min <= 1
-  const min = Math.min(...result);
-  const max = Math.max(...result);
-  expect(max - min).toBeLessThanOrEqual(1);
-}
 
 module.exports = splitInteger;
