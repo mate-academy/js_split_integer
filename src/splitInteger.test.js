@@ -21,6 +21,11 @@ test('should sort parts ascending if they are not equal', () => {
 });
 
 test('should add zeros if value < numberOfParts', () => {
-  expect(splitInteger(3, 5)).toEqual([0, 0, 0, 1, 2]);
+  expect(splitInteger(3, 5)).toEqual([0, 0, 1, 1, 1]);
   expect(splitInteger(1, 4)).toEqual([0, 0, 0, 1]);
+});
+test('should add zeros if value < numberOfParts', () => {
+  const result = splitInteger(3, 5);
+  expect(result).toEqual([0, 0, 1, 1, 1]);
+  checkInvariants(result, 3, 5);
 });
