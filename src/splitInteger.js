@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * @param {number} value
  * @param {number} numberOfParts
