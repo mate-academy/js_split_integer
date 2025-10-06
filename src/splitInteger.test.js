@@ -3,21 +3,17 @@
 const splitInteger = require('./splitInteger');
 
 const assertSplitProperties = (parts, value, numberOfParts) => {
-  // 1️⃣ długość tablicy
+
   expect(parts).toHaveLength(numberOfParts);
 
-  // 2️⃣ wszystkie elementy to liczby całkowite
   expect(parts.every(Number.isInteger)).toBe(true);
 
-  // 3️⃣ posortowane rosnąco
   expect(parts).toEqual([...parts].sort((a, b) => a - b));
 
-  // 4️⃣ różnica między max a min <= 1
   const diff = Math.max(...parts) - Math.min(...parts);
 
   expect(diff).toBeLessThanOrEqual(1);
 
-  // 5️⃣ suma wszystkich elementów równa wartości wejściowej
   const sum = parts.reduce((s, x) => s + x, 0);
 
   expect(sum).toBe(value);
@@ -57,5 +53,41 @@ test('should add zeros if value < numberOfParts', () => {
   const parts = splitInteger(value, numberOfParts);
 
   expect(parts).toEqual([0, 1, 1]);
+  assertSplitProperties(parts, value, numberOfParts);
+});
+
+test('example: splitInteger(8, 1)', () => {
+  const value = 8;
+  const numberOfParts = 1;
+  const parts = splitInteger(value, numberOfParts);
+
+  expect(parts).toEqual([8]);
+  assertSplitProperties(parts, value, numberOfParts);
+});
+
+test('example: splitInteger(6, 2)', () => {
+  const value = 6;
+  const numberOfParts = 2;
+  const parts = splitInteger(value, numberOfParts);
+
+  expect(parts).toEqual([3, 3]);
+  assertSplitProperties(parts, value, numberOfParts);
+});
+
+test('example: splitInteger(17, 4)', () => {
+  const value = 17;
+  const numberOfParts = 4;
+  const parts = splitInteger(value, numberOfParts);
+
+  expect(parts).toEqual([4, 4, 4, 5]);
+  assertSplitProperties(parts, value, numberOfParts);
+});
+
+test('example: splitInteger(32, 6)', () => {
+  const value = 32;
+  const numberOfParts = 6;
+  const parts = splitInteger(value, numberOfParts);
+
+  expect(parts).toEqual([5, 5, 5, 5, 6, 6]);
   assertSplitProperties(parts, value, numberOfParts);
 });
