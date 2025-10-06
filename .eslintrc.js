@@ -4,7 +4,7 @@ module.exports = {
     jest: true
   },
   rules: {
-    'no-proto': 0
+    'no-proto': 'off'
   },
   plugins: ['jest']
 };
