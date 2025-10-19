@@ -2,13 +2,22 @@
 'use strict';
 
 const splitInteger = require('./splitInteger');
+const isSortedAscending = require('./test-framework');
 
 test(`should split a number into equal parts
   if a value is divisible by a numberOfParts`, () => {
   const result = splitInteger(100, 4);
 
+  expect(result).toBeInstanceOf(Array);
   expect(result).toEqual([25, 25, 25, 25]);
   expect(result[0]).toEqual(result[result.length - 1]);
+  expect(result.length).toEqual(4);
+
+  result.forEach((part) => {
+    expect(Number.isInteger(part)).toBe(true);
+  });
+
+  expect(isSortedAscending(result)).toBe(true);
 
   const resultMaxMin = Math.max(...result) - Math.min(...result);
 
@@ -19,6 +28,12 @@ test(`should return a part equals to a value
   when splitting into 1 part`, () => {
   const result = splitInteger(100, 1);
 
+  expect(Array.isArray(result)).toBe(true);
+
+  result.forEach((part) => {
+    expect(Number.isInteger(part)).toBe(true);
+  });
+  expect(result.length).toEqual(1);
   expect(result).toEqual([100]);
 });
 
@@ -32,7 +47,12 @@ test(`should have length === 1
 test('should sort parts ascending if they are not equal', () => {
   const result = splitInteger(99, 4);
 
+  result.forEach((part) => {
+    expect(Number.isInteger(part)).toBe(true);
+  });
+  expect(isSortedAscending(result)).toBe(true);
   expect(result).toEqual([24, 25, 25, 25]);
+  expect(result.length).toEqual(4);
 
   const resultMaxMin = Math.max(...result) - Math.min(...result);
 
@@ -44,6 +64,13 @@ test('should add zeros if value < numberOfParts', () => {
   const equalResult = [];
   const equalValue = 3;
   const equalNumberOfParts = 100;
+
+  const floor = Math.floor(equalValue / equalNumberOfParts);
+  const ceil = Math.ceil(equalValue / equalNumberOfParts);
+
+  expect(floor).toEqual(0);
+  expect(ceil).toEqual(1);
+  expect(equalValue % equalNumberOfParts).toEqual(3);
 
   for (let i = 0; i < equalNumberOfParts - equalValue; i++) {
     equalResult.push(0);
