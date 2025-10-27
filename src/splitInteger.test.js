@@ -19,3 +19,26 @@ test('should sort parts ascending if they are not equal', () => {
 test('should add zeros if value < numberOfParts', () => {
   expect(splitInteger(5, 7)).toEqual([0, 0, 1, 1, 1, 1, 1]);
 });
+
+test('The difference between the max and min number in the array '
+  + 'should be <= 1', () => {
+  expect(Math.max(...splitInteger(21, 4)) - Math.min(...splitInteger(21, 4)))
+    .toBeLessThanOrEqual(1);
+});
+
+test.each([
+  [8, 1],
+  [6, 2],
+  [17, 4],
+  [21, 4],
+  [32, 6],
+  [5, 7],
+])('splitInteger(%i, %i) should return an ascending '
+  + 'sorted array (from lowest to highest)',
+(value, parts) => {
+  const result = splitInteger(value, parts);
+
+  for (let i = 0; i < result.length - 1; i++) {
+    expect(result[i]).toBeLessThanOrEqual(result[i + 1]);
+  }
+});
