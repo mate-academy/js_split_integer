@@ -42,3 +42,13 @@ test.each([
     expect(result[i]).toBeLessThanOrEqual(result[i + 1]);
   }
 });
+
+test.each([
+  [8, 1, [8]],
+  [6, 2, [3, 3]],
+  [17, 4, [4, 4, 4, 5]],
+  [32, 6, [5, 5, 5, 5, 6, 6]],
+])('splitInteger(%i, %i) should return %p (test case from Exaples,'
+  + ' requires precise equality)', (value, numberOfParts, expected) => {
+  expect(splitInteger(value, numberOfParts)).toEqual(expected);
+});
