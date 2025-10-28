@@ -9,7 +9,7 @@ test(`should split a number into equal parts
 
 test(`should return a part equals to a value
   when splitting into 1 part`, () => {
-  expect(splitInteger(10, 1)).toEqual([10]);
+  expect(splitInteger(8, 1)).toEqual([8]);
 });
 
 test('should sort parts ascending if they are not equal', () => {
