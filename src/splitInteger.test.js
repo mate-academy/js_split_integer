@@ -40,3 +40,4 @@ test("splitInteger(17, 4) should return [4, 4, 4, 5]", () => {
 test("splitInteger(32, 6) should return [5, 5, 5, 5, 6, 6]", () => {
   expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
 });
+
