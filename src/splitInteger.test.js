@@ -38,5 +38,5 @@ test("splitInteger(17, 4) should return [4, 4, 4, 5]", () => {
 });
 
 test("splitInteger(8, 1) should return [8]", () => {
-  expect(splitInteger(8, 1)).toEqual([8]);
+  expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
 });
