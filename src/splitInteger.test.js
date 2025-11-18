@@ -48,7 +48,7 @@ test('should add zeros if value < numberOfParts', () => {
     return count;
   }
 
-  expect(result).toHaveLength(8);
+  expect(result).toStrictEqual([0, 0, 1, 1, 1, 1, 1, 1]);
   expect(countZeros(result)).toBe(2);
   expect(result.reduce((a, b) => a + b, 0)).toBe(6);
 });
