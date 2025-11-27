@@ -5,21 +5,21 @@ const splitInteger = require('./splitInteger');
 const testCases = [
   {
     description: 'should split a number into equal parts if a value is divisible by a numberOfParts',
-    value: 10,
+    value: 6,
     numberOfParts: 2,
-    expected: [5, 5],
+    expected: [3, 3],
   },
   {
     description: 'should return a part equals to a value when splitting into 1 part',
-    value: 3,
+    value: 8,
     numberOfParts: 1,
-    expected: [3],
+    expected: [8],
   },
   {
     description: 'should sort parts ascending if they are not equal',
-    value: 5,
-    numberOfParts: 3,
-    expected: [1, 2, 2],
+    value: 17,
+    numberOfParts: 4,
+    expected: [4, 4, 4, 5],
   },
   {
     description: 'should add zeros if value < numberOfParts',
