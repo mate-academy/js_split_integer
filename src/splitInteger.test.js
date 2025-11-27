@@ -22,6 +22,12 @@ const testCases = [
     expected: [4, 4, 4, 5],
   },
   {
+    description: 'should sort parts ascending if they are not equal',
+    value: 32,
+    numberOfParts: 6,
+    expected: [5, 5, 5, 5, 6, 6],
+  },
+  {
     description: 'should add zeros if value < numberOfParts',
     value: 2,
     numberOfParts: 5,
