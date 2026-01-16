@@ -1,9 +1,11 @@
 'use strict';
 
-function toBeSortedAscending(arr) {
-  if (hasRemainder(arr) === false) {
+function toBeSortedAscending(arr, number, parts) {
+  if (hasRemainder(number, parts) === false) {
     return arr.every((val, i) => i === 0 || arr[i - 1] <= val);
   }
+
+  return true;
 }
 
 function hasRemainder(number, parts) {
