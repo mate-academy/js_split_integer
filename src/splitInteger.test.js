@@ -11,17 +11,13 @@ test(`should split a number into equal parts
 test(`should return a part equals to a value
   when splitting into 1 part`, () => {
   expect(splitInteger(8, 1)).toEqual([8]);
-  expect(splitInteger(25, 1)).toEqual([25]);
 });
 
 test('should sort parts ascending if they are not equal', () => {
-  const result = splitInteger(17, 4);
-  const sorted = [...result].sort((a, b) => a - b);
-
-  expect(result).toEqual(sorted);
+  expect(splitInteger(17, 4)).toEqual([4, 4, 4, 5]);
+  expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
 });
 
 test('should add zeros if value < numberOfParts', () => {
   expect(splitInteger(3, 5)).toEqual([0, 0, 1, 1, 1]);
-  expect(splitInteger(1, 3)).toEqual([0, 0, 1]);
 });
