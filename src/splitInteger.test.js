@@ -13,7 +13,7 @@ test(`should return a part equals to a value
   when splitting into 1 part`, () => {
   const result = splitInteger(20, 1);
 
-  expect(result).toBe([20]);
+  expect(result).toEqual([20]);
 });
 
 test(`should sort parts ascending if they are not equal`, () => {
