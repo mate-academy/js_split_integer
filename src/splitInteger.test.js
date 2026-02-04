@@ -1,19 +1,30 @@
-'use strict';
+/* eslint-disable quotes */
+"use strict";
 
-const splitInteger = require('./splitInteger');
+const splitInteger = require("./splitInteger");
 
 test(`should split a number into equal parts
   if a value is divisible by a numberOfParts`, () => {
-  expect(splitInteger(17, 4))
-    .toHaveLength(4);
+  const result = splitInteger(20, 5);
+
+  expect(result).toEqual([4, 4, 4, 4, 4]);
 });
 
-test('should sort parts ascending if they are not equal', () => {
-  expect(splitInteger(32, 6))
-    .toEqual([5, 5, 5, 5, 6, 6]);
+test(`should return a part equals to a value
+  when splitting into 1 part`, () => {
+  const result = splitInteger(20, 1);
+
+  expect(result).toEqual([20]);
 });
 
-test('should add zeros if value < numberOfParts', () => {
-  expect(splitInteger(17, 0))
-    .toEqual([]);
+test("should sort parts ascending if they are not equal", () => {
+  const result = splitInteger(21, 5);
+
+  expect(result).toEqual([4, 4, 4, 4, 5]);
+});
+
+test("should add zeros if value < numberOfParts", () => {
+  const result = splitInteger(4, 5);
+
+  expect(result).toEqual([0, 1, 1, 1, 1]);
 });
