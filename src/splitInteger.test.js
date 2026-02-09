@@ -27,6 +27,10 @@ test('should sort parts ascending if they are not equal', () => {
   // expect(result).toEqual([4, 4, 4, 5]);
 });
 
+test('splits 32 into 6 parts exactly as in the example', () => {
+  expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
+});
+
 test('should add zeros if value < numberOfParts', () => {
   const result = splitInteger(3, 5);
 
