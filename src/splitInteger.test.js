@@ -8,6 +8,7 @@ test(`should split a number into equal parts
   const result = splitInteger(6, 2)
 
   expect(result).toEqual([3, 3])
+  expect(result).toHaveLength(2)
 });
 
 test(`should return a part equals to a value
@@ -24,6 +25,7 @@ test('should sort parts ascending if they are not equal', () => {
   const diff = Math.max(...result) - Math.min(...result)
 
   expect(result).toEqual([5, 5, 5, 5, 6, 6])
+  expect(result).toHaveLength(6)
   expect(diff).toBeLessThanOrEqual(1)
 });
 
@@ -32,4 +34,5 @@ test('should add zeros if value < numberOfParts', () => {
   const result = splitInteger(1, 2)
 
   expect(result).toEqual([0, 1])
+  expect(result).toHaveLength(2)
 });
