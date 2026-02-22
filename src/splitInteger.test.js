@@ -18,9 +18,8 @@ test(`should return a part equals to a value
 
 test('should sort parts ascending if they are not equal', () => {
   const result = splitInteger(17, 4);
-  const unique = new Set(result);
 
-  expect([...unique][1]).toBeGreaterThan([...unique][0]);
+  expect(result).toEqual([4, 4, 4, 5]);
 });
 
 test('should add zeros if value < numberOfParts', () => {
