@@ -21,6 +21,5 @@ test('should sort parts ascending if they are not equal', () => {
 
 test('should add zeros if value < numberOfParts', () => {
   const actual = splitInteger(2, 3);
-    console.log(actual);
   expect(actual).toEqual([0, 1, 1]);
 });
