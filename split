@@ -1,0 +1,83 @@
+const { splitInteger } = require('./splitInteger'); // Replace './splitInteger' with your actual import path
+
+describe('splitInteger', () => {
+  // Basic Cases
+  it('should split 8 into 1 part', () => {
+    const result = splitInteger(8, 1);
+    expect(result).toEqual([8]);
+  });
+
+  it('should split 6 into 2 parts', () => {
+    const result = splitInteger(6, 2);
+    expect(result).toEqual([3, 3]);
+  });
+
+  it('should split 17 into 4 parts', () => {
+    const result = splitInteger(17, 4);
+    expect(result).toEqual([4, 4, 4, 5]);
+  });
+
+  it('should split 32 into 6 parts', () => {
+    const result = splitInteger(32, 6);
+    expect(result).toEqual([5, 5, 5, 5, 6, 6]);
+  });
+
+  // Edge Cases
+  it('should split 1 into 1 part', () => {
+    const result = splitInteger(1, 1);
+    expect(result).toEqual([1]);
+  });
+
+  it('should split 10 into 10 parts', () => {
+    const result = splitInteger(10, 10);
+    expect(result).toEqual([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
+  });
+
+  it('should split 100 into 2 parts', () => {
+    const result = splitInteger(100, 2);
+    expect(result).toEqual([50, 50]);
+  });
+
+  it('should split 1000 into 20 parts', () => {
+    const result = splitInteger(1000, 20);
+    expect(result).toEqual(Array(20).fill(50));
+  });
+
+  // Large Numbers and Parts
+  it('should split 5 into 10 parts', () => {
+    const result = splitInteger(5, 10);
+    expect(result).toEqual([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
+  });
+
+  it('should split 20 into 30 parts', () => {
+    const result = splitInteger(20, 30);
+    expect(result).toEqual(Array(30).fill(1));
+  });
+
+  it('should split 15 into 5 parts', () => {
+    const result = splitInteger(15, 5);
+    expect(result).toEqual([3, 3, 3, 3, 3]);
+  });
+
+  // Random Cases
+  it('should split 23 into 7 parts', () => {
+    const result = splitInteger(23, 7);
+    expect(result.length).toBe(7);
+    expect(Math.max(...result) - Math.min(...result)).toBeLessThanOrEqual(1);
+    expect(result).toEqual(expect.arrayContaining(result.sort((a, b) => a - b)));
+  });
+
+  it('should split 37 into 12 parts', () => {
+    const result = splitInteger(37, 12);
+    expect(result.length).toBe(12);
+    expect(Math.max(...result) - Math.min(...result)).toBeLessThanOrEqual(1);
+    expect(result).toEqual(expect.arrayContaining(result.sort((a, b) => a - b)));
+  });
+
+  it('should split 50 into 3 parts', () => {
+    const result = splitInteger(50, 3);
+    expect(result.length).toBe(3);
+    expect(Math.max(...result) - Math.min(...result)).toBeLessThanOrEqual(1);
+    expect(result).toEqual(expect.arrayContaining(result.sort((a, b) => a - b)));
+  });
+});
