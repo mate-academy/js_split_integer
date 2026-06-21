@@ -27,3 +27,9 @@ test('should add zeros if value < numberOfParts', () => {
 
   expect(result).toEqual([0, 0]);
 });
+
+test('should split 17 into 4 parts as [4, 4, 4, 5]', () => {
+  const result = splitInteger(17, 4);
+
+  expect(result).toEqual([4, 4, 4, 5]);
+});
