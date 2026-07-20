@@ -27,3 +27,27 @@ test('should add zeros if value < numberOfParts', () => {
 
   expect(result).toEqual([0, 0, 0, 0, 0, 0, 0, 1, 1, 1]);
 });
+
+test('should return the value when splitting into 1 part', () => {
+  const result = splitInteger(8, 1);
+
+  expect(result).toEqual([8]);
+});
+
+test('should split a number into equal parts', () => {
+  const result = splitInteger(6, 2);
+
+  expect(result).toEqual([3, 3]);
+});
+
+test('should split into ascending parts when the result is not equal', () => {
+  const result = splitInteger(17, 4);
+
+  expect(result).toEqual([4, 4, 4, 5]);
+});
+
+test('should distribute the remainder between several parts', () => {
+  const result = splitInteger(32, 6);
+
+  expect(result).toEqual([5, 5, 5, 5, 6, 6]);
+});
