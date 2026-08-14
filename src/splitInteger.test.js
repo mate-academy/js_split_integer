@@ -20,10 +20,6 @@ test('should add zeros if value < numberOfParts', () => {
   expect(splitInteger(3, 5)).toEqual([0, 0, 1, 1, 1]);
 });
 
-test('should add zeros if value < numberOfParts', () => {
-  expect(splitInteger(3, 5)).toEqual([0, 0, 1, 1, 1]);
-});
-
 test(`should split a number into sorted parts
   with difference not greater than 1`, () => {
   expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
