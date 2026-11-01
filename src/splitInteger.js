@@ -19,5 +19,5 @@ function splitInteger(value, numberOfParts) {
 
   return parts;
 }
-console.log(splitInteger(1,5))
+
 module.exports = splitInteger;
