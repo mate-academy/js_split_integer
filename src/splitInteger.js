@@ -13,7 +13,7 @@ function splitInteger(value, numberOfParts) {
 
   for (let partsLeft = numberOfParts; partsLeft > 0; partsLeft--) {
     if (countZero) {
-      const addNum = partsLeft === value ? 1 : 0;
+      const addNum = partsLeft <= value ? 1 : 0;
 
       parts.push(addNum);
 
