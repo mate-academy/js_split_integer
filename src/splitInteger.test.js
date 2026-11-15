@@ -12,7 +12,7 @@ test(`should return a part equals to a value
   expect(splitInteger(8, 1)).toEqual([8]);
 });
 
-test('should sort parts ascending if they are not equal', () => {
+test('should sort parts ascending if they are not equal ll', () => {
   expect(splitInteger(32, 6)).toEqual([5, 5, 5, 5, 6, 6]);
 });
 
